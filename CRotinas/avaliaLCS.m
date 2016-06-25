@@ -8,4 +8,6 @@ plot(tempo,Sinal.LCS1510.rampa.Dado(:,6));
 ax(3) = subplot(3,1,3);
 plot(tempo,Sinal.LCS1510.rampa.Dado(:,7));
 
+testeteste
+
 linkaxes(ax,'x');
