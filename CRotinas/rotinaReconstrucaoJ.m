@@ -1,5 +1,4 @@
-function [J, theta, thetaP, bestResponse,user,ref,control,tempo,ind] = ...
-	rotinaReconstrucaoJ(alpha,gamma,omega,h,PID0,arquivo,diretorio)
+function [J, theta, thetaP, bestResponse,user,ref,control,tempo,ind] = rotinaReconstrucaoJ(alpha,gamma,omega,h,PID0,arquivo,diretorio)
 % close all
 clear Jmin
 if iscolumn(alpha)
@@ -27,6 +26,7 @@ PID0 = [PID0(1) PID0(1)/PID0(2) PID0(1)*PID0(3)];
 control = [Sinal.Dado(:,6) Sinal.Dado(:,7) ...
 	ones(size(Sinal.Dado(:,6)))*Sinal.Param(4)...
 	ones(size(Sinal.Dado(:,6)))*Sinal.Param(5)];
+
 % figure('Color',[1 1 1],'name',[Sinal.File],'NumberTitle','off','units','normalized','outerposition',[0 0 1 1]);
 
 % ax(1)=subplot(2,1,1);
@@ -78,6 +78,7 @@ J = zeros(length(ind)/2,1);
 zeta = J;
 
 theta_ = zeros(length(ind)/2,length(PID0));
+
 theta = theta_;
 thetaP = theta_;
 
@@ -87,19 +88,21 @@ for k=1:length(ind)/2
 	cSum = cumsum(Sinal.Dado(ind(2*k-1):ind(2*k),5))/1000;
 	T0_begin = find(cSum >= To,1);
 	int_err = err(ind(2*k-1):ind(2*k));
+    int_err = int_err.^2/(max(ref))^2/(20-To);
 	
-	J(k) = trapz(cSum(T0_begin:end),int_err(T0_begin:end).^2)/(max(ref))^2;
-	
+	J(k) = trapz(cSum(T0_begin:end),int_err(T0_begin:end));
 	if k == 1
 		zeta(k) = 0;
-		theta_(k,:) = theta(k,:) - alpha;
+		theta_(k,:) = theta(k,:) - alpha.*gamma.*cos(omega)*J(k)-alpha; % jeito que estava no LabView
+%         theta_(k,:) = theta(k,:)-alpha;
 		Jmin = J(k);
+        theta(k,:) = theta_(k,:) + alpha;
 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
 	else
 		zeta(k) = -h*zeta(k-1) + J(k-1);
-		theta_(k,:) = theta_(k-1,:) - gamma.*alpha.*cos(omega*(k-1))...
-			* (J(k-1) - (1+h)*zeta(k-1));
-		theta(k,:) = theta_(k,:) + alpha.*cos(omega*k);
+		theta_(k,:) = theta_(k-1,:) - gamma.*alpha.*cos(omega*(k-1-1))...
+			* (J(k) - (1+h)*zeta(k-1));
+		theta(k,:) = theta_(k,:) + alpha.*cos(omega*(k-1));
 	end
 	
 	if J(k) < Jmin && (ind(2*k) - ind(2*k-1)) > 500
@@ -114,6 +117,7 @@ end
 for k = 1:length(ind)/2
 	thetaP(k,:) = [theta(k,1) theta(k,1)/theta(k,2) theta(k,1)*theta(k,3)];
 end
+
 nome = arquivo(1:end-4);
 tempo=(Sinal.Dado(:,8)-Sinal.Dado(1,8))/1000;
 
