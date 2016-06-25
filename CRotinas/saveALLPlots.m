@@ -51,11 +51,11 @@ set(gca, 'FontSize', FONTSIZE)
 ax(3) = subplot(2,2,3);
 
 plot(K,J,'k','LineWidth',3,'Marker','o');
-title('J(\theta(k))')
+title('Cost Function Evolution')
 legend('J(\theta(k))','Location','northoutside','Orientation',...
 	'horizontal');
 xlabel('Iterations (k)')
-ylabel('Cost Function Evolution')
+ylabel('J(\theta(k))')
 
 set(gca, 'FontSize', FONTSIZE)
  set(ax(3),'XTick',K);

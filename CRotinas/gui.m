@@ -107,9 +107,11 @@ PID0 =  handles.M(1:3,4);
 subplot(3,1,[1 2]);
 plot(tempo,user,'b','LineWidth',3);hold on
 plot(tempo,ref,'r--','LineWidth',3);hold off
-subplot(3,1,3);
-
 axis([0, inf, -inf,70])
+subplot(3,1,3);
+plot(tempo,control(:,1),'r',tempo,control(:,2),'g')
+axis([0 inf -inf inf])
+
 
 
 
@@ -449,7 +451,7 @@ if handles.initial == 99 && handles.final ==99
 
 		if(X(2) > 0)
 			temp = ind(ind > X(2));
-			final = temp(1);
+			final = temp(2);
 		end
 
 	initialJ = (find(~(ind-initial))+1)/2;
@@ -533,7 +535,6 @@ end
 % 	xlim([0 final]);
 % 	
 % 	hold off;
-
 guidata(hObject, handles);
 saveALLPlots(theta(initial:final,:),thetaP(initial:final,:),J(initial:final),bestResponse,tempo,...
 	arquivo,diretorio)

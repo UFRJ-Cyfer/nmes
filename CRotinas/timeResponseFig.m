@@ -21,7 +21,7 @@ axis([0, inf, -inf,70])
 %     legend(Sinal.Nome{R.indCon},Sinal.Nome{3},'1','2','3','4','5')
 % 		xlabel('Time (s)')
 ylabel('Angle (º)','FontWeight','bold')
-h = legend('Reference y_{m}','Elbow Angle y','Location',...
+h = legend('Elbow Angle y(t) ','Reference r(t) ','Location',...
 	'northoutside','Orientation','horizontal');
 legend('boxoff');
 set(h,'FontSize',18);
@@ -30,6 +30,7 @@ set(gca, 'FontSize', 18)
 xlabel('Time (s)','FontWeight','bold')
 
 subplot(3,1,3);
+
 biceps = control(:,1);
 triceps = control(:,2);
 		minB = min(biceps(biceps>0));
