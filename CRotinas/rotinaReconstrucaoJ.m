@@ -85,56 +85,53 @@ theta = theta_;
 thetaP = theta_;
 
 theta(1,:) = PID0;
+theta_(1,:) = theta(1,:)-alpha;
+zeta(1) = 0;
+
 for k=1:length(ind)/2
 	
 	cSum = cumsum(Sinal.Dado(ind(2*k-1):ind(2*k),5))/1000;
 	T0_begin = find(cSum >= To,1);
 	int_err = err(ind(2*k-1):ind(2*k));
     int_err = int_err.^2/(max(ref))^2/(20-To);
-% 	int_err = int_err.^2/(max(ref))^2;
 	J(k) = trapz(cSum(T0_begin:end),int_err(T0_begin:end));
-	if k == 1
-		zeta(k) = 0;
-		theta_(k,:) = theta(k,:) - alpha.*gamma.*cos(omega)*J(k)-alpha; % jeito que estava no LabView
-%         theta_(k,:) = theta(k,:)-alpha;
+    
+    if k == 1
 		Jmin = J(k);
 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
-	else
-		zeta(k) = -h*zeta(k-1) + J(k-1);
-		theta_(k,:) = theta_(k-1,:) - gamma.*alpha.*cos(omega*(k-1))...
-...% 					* (J(k-1) - (1+h)*zeta(k-1)); 
-	...
-				* (J(k) - (1+h)*zeta(k-1)); % Jeito q estava no labview
-		theta(k,:) = theta_(k,:) + alpha.*cos(omega*(k));
+    end
+    
+		zeta(k+1) = -h*zeta(k) + J(k);
+		theta_(k+1,:) = theta_(k,:) - gamma.*alpha.*cos(omega*(k))...
+					* (J(k) - (1+h)*zeta(k)); 
+		theta(k+1,:) = theta_(k+1,:) + alpha.*cos(omega*(k+1));
+	
+	if J(k) < Jmin && (ind(2*k) - ind(2*k-1)) > 500
+		Jmin = J(k);
+		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
 	end
 	
-% 	if J(k) < Jmin && (ind(2*k) - ind(2*k-1)) > 500
-% 		Jmin = J(k);
+% 	if k == 4
 % 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
 % 	end
 	
-	if k == 4
-		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
-	end
-	
 	
 end
 
 
-for k = 1:length(ind)/2
+for k = 1:size(theta,1)
 	thetaP(k,:) = [theta(k,1) theta(k,1)/theta(k,2) theta(k,1)*theta(k,3)];
 end
 
-nome = arquivo(1:end-4);
 tempo=(Sinal.Dado(:,8)-Sinal.Dado(1,8))/1000;
 
 
 % out = msgbox('Starting to Save Data');
 % save([diretorio 'Data/' nome '.mat'],'Sinal','alpha','gamma','omega','h','PID0')
-% set(findobj(out,'Tag','MessageBox'),'String','Finished Saving Picture And Data')
+% set(findobj(out,'Tag','MessageBox'),'String','Finished Savifng Picture And Data')
 % delete(out)
 
-% saveALLPlots(theta,thetaP,J,bestResponse,user,ref,ind,Sinal,arquivo,diretorio);
+% saveIterations(theta,thetaP,J,bestResponse,user,ref,ind,Sinal,arquivo,diretorio);
 
 
 end

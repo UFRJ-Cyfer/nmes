@@ -353,7 +353,7 @@ handles.tempo = tempo;
 handles.ind = ind;
 handles.J = J;
 
-X = 0:1:length(J)-1;
+X = 0:1:length(J);
 
 plot(handles.axes1,X,theta)
 axes(handles.axes1);
@@ -365,7 +365,7 @@ axes(handles.axes3);
 grid on;
 legend(handles.legendP);
 
-plot(handles.axes2,X,J)
+plot(handles.axes2,X(1:end-1),J)
 axes(handles.axes2);
 grid on;
 legend('J(k)');
@@ -537,7 +537,7 @@ end
 % 	
 % 	hold off;
 guidata(hObject, handles);
-saveALLPlots(theta(initial:final,:),thetaP(initial:final,:),J(initial:final),bestResponse,tempo,...
+saveIterations(theta(initial:final,:),thetaP(initial:final,:),J(initial:final),bestResponse,tempo,...
 	arquivo,diretorio)
 
 

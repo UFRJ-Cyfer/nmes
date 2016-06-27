@@ -1,4 +1,4 @@
-function [K,tempo] = saveALLPlots(theta,thetaP,J,bestResponse,tempo,arquivo,diretorio)
+function [K,tempo] = saveIterations(theta,thetaP,J,bestResponse,tempo,arquivo,diretorio)
 	
 X=150;
 Y=60;
