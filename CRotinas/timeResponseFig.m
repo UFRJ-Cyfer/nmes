@@ -20,14 +20,14 @@ axis([0, inf, -inf,70])
 %         'k+','MarkerSize',10,'LineWidth',2);
 %     legend(Sinal.Nome{R.indCon},Sinal.Nome{3},'1','2','3','4','5')
 % 		xlabel('Time (s)')
-ylabel('Angle (º)','FontWeight','bold')
+ylabel('Angle (º)')
 h = legend('Elbow Angle y(t) ','Reference r(t) ','Location',...
 	'northoutside','Orientation','horizontal');
 legend('boxoff');
 set(h,'FontSize',18);
 
 set(gca, 'FontSize', 18)
-xlabel('Time (s)','FontWeight','bold')
+xlabel('Time (s)')
 
 subplot(3,1,3);
 
@@ -46,8 +46,9 @@ triceps = control(:,2);
 		legend('boxoff');
 		set(h1,'FontSize',18);
 	axis([0, tempo(final)-tempo(initial), min1,inf])
-    xlabel('Time (s)','FontWeight','bold')
-    ylabel('Current (mA)','FontWeight','bold')
+    xlabel('Time (s)')
+    ylabel('Current (mA)')
+	set(gca, 'FontSize', 18)
 
 
 str = inputdlg('Input Image Title','ImageTitle');

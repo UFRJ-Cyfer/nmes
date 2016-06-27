@@ -91,32 +91,31 @@ for k=1:length(ind)/2
 	T0_begin = find(cSum >= To,1);
 	int_err = err(ind(2*k-1):ind(2*k));
     int_err = int_err.^2/(max(ref))^2/(20-To);
-	
+% 	int_err = int_err.^2/(max(ref))^2;
 	J(k) = trapz(cSum(T0_begin:end),int_err(T0_begin:end));
 	if k == 1
 		zeta(k) = 0;
-% 		theta_(k,:) = theta(k,:) - alpha.*gamma.*cos(omega)*J(k)-alpha; % jeito que estava no LabView
-        theta_(k,:) = theta(k,:)-alpha;
+		theta_(k,:) = theta(k,:) - alpha.*gamma.*cos(omega)*J(k)-alpha; % jeito que estava no LabView
+%         theta_(k,:) = theta(k,:)-alpha;
 		Jmin = J(k);
-        theta(k,:) = theta_(k,:) + alpha;
 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
 	else
 		zeta(k) = -h*zeta(k-1) + J(k-1);
 		theta_(k,:) = theta_(k-1,:) - gamma.*alpha.*cos(omega*(k-1))...
-					* (J(k-1) - (1+h)*zeta(k-1));
-	
-	% 			* (J(k) - (1+h)*zeta(k-1)); % Jeito q estava no labview
+...% 					* (J(k-1) - (1+h)*zeta(k-1)); 
+	...
+				* (J(k) - (1+h)*zeta(k-1)); % Jeito q estava no labview
 		theta(k,:) = theta_(k,:) + alpha.*cos(omega*(k));
 	end
 	
-	if J(k) < Jmin && (ind(2*k) - ind(2*k-1)) > 500
-		Jmin = J(k);
-		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
-	end
-	
-% 	if k == 4
+% 	if J(k) < Jmin && (ind(2*k) - ind(2*k-1)) > 500
+% 		Jmin = J(k);
 % 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
 % 	end
+	
+	if k == 4
+		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
+	end
 	
 	
 end

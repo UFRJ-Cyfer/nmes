@@ -414,6 +414,7 @@ end
 handles.fileStringList = string;
 
 set(handles.fileList,'string',string);
+
 guidata(hObject, handles);
 
 

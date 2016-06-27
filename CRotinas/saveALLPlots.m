@@ -36,6 +36,8 @@ legend(legendS,'Location','northoutside','Orientation',...
 title('Parameter Evolution')
 set(gca, 'FontSize', FONTSIZE)
  set(ax(1),'XTick',K);
+ xlabel('Iterations (k)')
+
 
 ax(2) = subplot(2,2,2);
 % ax(3).XTickMode = 'manual';
@@ -47,6 +49,8 @@ legend(legendP,'Location','northoutside','Orientation',...
 	'horizontal');
 set(gca, 'FontSize', FONTSIZE)
  set(ax(2),'XTick',K);
+ xlabel('Iterations (k)')
+
  
 ax(3) = subplot(2,2,3);
 
