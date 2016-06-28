@@ -311,7 +311,7 @@ handles.file = str(val,1:end);
 
 handles.file = strtrim(handles.file);
 
-
+found = 0;
 
 handles.initialJ = 99;
 handles.finalJ = 99;
@@ -336,6 +336,7 @@ else
 	data = reshape(Param.ESParamValues,[3 3]);
 	data = cat(2,data,(Param.PIDValue(1,:))');
 	set(handles.paramTable,'data',data);
+	found = 1;
 	drawnow;
 end
 
