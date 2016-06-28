@@ -113,10 +113,6 @@ plot(tempo,control(:,1),'r',tempo,control(:,2),'g')
 axis([0 inf -inf inf])
 
 
-
-
-
-
 % --- Executes during object creation, after setting all properties.
 function axes1_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to axes1 (see GCBO)
@@ -313,10 +309,16 @@ str = get(hObject, 'String');
 val = get(hObject,'Value');
 handles.file = str(val,1:end);
 
+handles.file = strtrim(handles.file);
+
+found = 0;
+
 handles.initialJ = 99;
 handles.finalJ = 99;
 handles.initial = 99;
 handles.final = 99;
+
+
 
 if exist([handles.diretorio handles.file], 'file') == 0
 	% File does not exist.  Do stuff....
@@ -327,8 +329,17 @@ if exist([handles.diretorio handles.file], 'file') == 0
 	handles.diretorio = [pathname '\'];
 end
 
+if exist([handles.diretorio handles.file(1:end-4) 'Param.txt'], 'file') == 0
+	data = get(handles.paramTable,'data');
+else
+	Param = NMESAbreParam([handles.file(1:end-4) 'Param.txt'],handles.diretorio);
+	data = reshape(Param.ESParamValues,[3 3]);
+	data = cat(2,data,(Param.PIDValue(1,:))');
+	set(handles.paramTable,'data',data);
+	found = 1;
+	drawnow;
+end
 
-data = get(handles.paramTable,'data');
 
 M = cell2mat(data(1:3,:));
 
