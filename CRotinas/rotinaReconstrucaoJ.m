@@ -64,8 +64,9 @@ ref = Sinal.Dado(:,3);
 idx = find(ref>150);
 ref(idx)= ref(idx-1);
 
-err = ref - user;
+tempo=(Sinal.Dado(:,8)-Sinal.Dado(1,8))/1000;
 
+err = ref - user;
 
 
 ind = ref > 0;
@@ -122,17 +123,6 @@ end
 for k = 1:size(theta,1)
 	thetaP(k,:) = [theta(k,1) theta(k,1)/theta(k,2) theta(k,1)*theta(k,3)];
 end
-
-tempo=(Sinal.Dado(:,8)-Sinal.Dado(1,8))/1000;
-
-
-% out = msgbox('Starting to Save Data');
-% save([diretorio 'Data/' nome '.mat'],'Sinal','alpha','gamma','omega','h','PID0')
-% set(findobj(out,'Tag','MessageBox'),'String','Finished Savifng Picture And Data')
-% delete(out)
-
-% saveIterations(theta,thetaP,J,bestResponse,user,ref,ind,Sinal,arquivo,diretorio);
-
 
 end
 
