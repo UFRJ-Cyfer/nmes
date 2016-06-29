@@ -27,19 +27,19 @@ function varargout = gui(varargin)
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
-	'gui_Singleton',  gui_Singleton, ...
-	'gui_OpeningFcn', @gui_OpeningFcn, ...
-	'gui_OutputFcn',  @gui_OutputFcn, ...
-	'gui_LayoutFcn',  [] , ...
-	'gui_Callback',   []);
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @gui_OpeningFcn, ...
+    'gui_OutputFcn',  @gui_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
-	gui_State.gui_Callback = str2func(varargin{1});
+    gui_State.gui_Callback = str2func(varargin{1});
 end
 
 if nargout
-	[varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
 else
-	gui_mainfcn(gui_State, varargin{:});
+    gui_mainfcn(gui_State, varargin{:});
 end
 % End initialization code - DO NOT EDIT
 
@@ -56,7 +56,7 @@ handles.diretorio = diretorio;
 x = dir([diretorio '*.txt']);
 string = [];
 for i=1:length(x)
-	string = char(string,x(i).name);
+    string = char(string,x(i).name);
 end
 set(handles.fileList,'string',string);
 
@@ -103,7 +103,7 @@ omega = handles.M(1:3,3);
 PID0 =  handles.M(1:3,4);
 
 [~,~,~,~,user,ref,control,tempo] = rotinaReconstrucaoJ(alpha,...
-	gamma,omega,1/2,PID0,handles.file,handles.diretorio);
+    gamma,omega,1/2,PID0,handles.file,handles.diretorio);
 subplot(3,1,[1 2]);
 plot(tempo,user,'b','LineWidth',3);hold on
 plot(tempo,ref,'r--','LineWidth',3);hold off
@@ -131,7 +131,7 @@ function edit1_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -144,7 +144,7 @@ function edit2_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -157,7 +157,7 @@ function edit3_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -170,7 +170,7 @@ function edit4_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -182,7 +182,7 @@ function edit5_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -195,7 +195,7 @@ function edit6_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -207,7 +207,7 @@ function edit7_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -219,7 +219,7 @@ function edit8_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -242,7 +242,7 @@ function edit9_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -254,7 +254,7 @@ function edit10_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -267,7 +267,7 @@ function edit11_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -279,7 +279,7 @@ function edit12_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -307,7 +307,8 @@ function fileList_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 str = get(hObject, 'String');
 val = get(hObject,'Value');
-handles.file = str(val,1:end);
+
+handles.file = str{val};
 
 handles.file = strtrim(handles.file);
 
@@ -321,28 +322,26 @@ handles.final = 99;
 
 
 if exist([handles.diretorio handles.file], 'file') == 0
-	% File does not exist.  Do stuff....
-	set(handles.status,'String','ERROR');
-	drawnow;
-	uiwait(msgbox('Please Indicate the correct folder'));
-	pathname = uigetdir();
-	handles.diretorio = [pathname '\'];
+    % File does not exist.  Do stuff....
+    set(handles.status,'String','ERROR');
+    drawnow;
+    uiwait(msgbox('Please Indicate the correct folder'));
+    pathname = uigetdir();
+    handles.diretorio = [pathname '\'];
 end
 
 if exist([handles.diretorio handles.file(1:end-4) 'Param.txt'], 'file') == 0
-	data = get(handles.paramTable,'data');
-	M = cell2mat(data(1:3,:));
+    data = get(handles.paramTable,'data');
+    M = data(1:3,:);
 else
-	Param = NMESAbreParam([handles.file(1:end-4) 'Param.txt'],handles.diretorio);
-	data = reshape(Param.ESParamValues,[3 3]);
-	data = cat(2,data,(Param.PIDValue(1,:))');
-	set(handles.paramTable,'data',data);
-	found = 1;
-	M = data;
-	drawnow;
+    Param = NMESAbreParam([handles.file(1:end-4) 'Param.txt'],handles.diretorio);
+    data = reshape(Param.ESParamValues,[3 3]);
+    data = cat(2,data,(Param.PIDValue(1,:))');
+    set(handles.paramTable,'data',data);
+    found = 1;
+    M = data;
+    drawnow;
 end
-
-
 
 handles.M=M;
 
@@ -355,15 +354,15 @@ set(handles.status,'String','Loading...');
 drawnow;
 
 if found == 0
-[J, theta, thetaP, bestResponse,user,ref,tempo,ind] = rotinaReconstrucaoJ(alpha,gamma,omega,1/2,PID0,str(val,1:end),handles.diretorio);
+    [J, theta, thetaP, bestResponse,user,ref,tempo,ind] = rotinaReconstrucaoJ(alpha,gamma,omega,1/2,PID0,handles.file,handles.diretorio);
 else
-	theta = Param.PIDValue;
-	[J, ~, ~, bestResponse,user,ref,tempo,ind] = ...
-		rotinaReconstrucaoJ(alpha,gamma,omega,1/2,PID0,str(val,1:end),handles.diretorio);
-	thetaP = theta;
-	for k = 1:size(theta,1)
-		thetaP(k,:) = [theta(k,1) theta(k,1)/theta(k,2) theta(k,1)*theta(k,3)];
-	end
+    theta = Param.PIDValue;
+    [J, ~, ~, bestResponse,user,ref,tempo,ind] = ...
+        rotinaReconstrucaoJ(alpha,gamma,omega,1/2,PID0,handles.file,handles.diretorio);
+    thetaP = theta;
+    for k = 1:size(theta,1)
+        thetaP(k,:) = [theta(k,1) theta(k,1)/theta(k,2) theta(k,1)*theta(k,3)];
+    end
 end
 
 handles.theta = theta;
@@ -415,7 +414,7 @@ function fileList_CreateFcn(hObject, eventdata, handles)
 % Hint: listbox controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-	set(hObject,'BackgroundColor','white');
+    set(hObject,'BackgroundColor','white');
 end
 
 
@@ -429,13 +428,17 @@ folder = uigetdir();
 handles.diretorio = [folder '\'];
 
 x = dir([handles.diretorio '*.txt']);
-string = [];
-for i=1:length(x)
-	string = char(string,x(i).name);
-end
-handles.fileStringList = string;
+fileStrings = [];
 
-set(handles.fileList,'string',string);
+for i=1:length(x)
+    if isempty(strfind(x(i).name,'Param'))
+        fileStrings{end+1}= x(i).name;
+    end
+end
+
+handles.fileStringList = fileStrings;
+
+set(handles.fileList,'string',fileStrings);
 
 guidata(hObject, handles);
 
@@ -453,37 +456,37 @@ omega = handles.M(1:3,3);
 PID0 =  handles.M(1:3,4);
 
 [~,~,~,~,user,ref,control,tempo,ind] = rotinaReconstrucaoJ(alpha,...
-	gamma,omega,1/2,PID0,handles.file,handles.diretorio);
+    gamma,omega,1/2,PID0,handles.file,handles.diretorio);
 
 if handles.initial == 99 && handles.final ==99
-	plot(user,'b','LineWidth',3);hold on
-	plot(ref,'r--','LineWidth',3);hold off
-
-		[X,Y] = ginput(2);
-		if X(1)<0;
-			X(1)=1;
-		end
-		if X(2)>length(ref)
-			X(2)=length(ref);
-		end
-
-		if(X(1) > 0)
-			temp = ind(ind < X(1));
-			initial = temp(end);
-		end
-
-		if(X(2) > 0)
-			temp = ind(ind > X(2));
-			final = temp(2);
-		end
-
-	initialJ = (find(~(ind-initial))+1)/2;
-	finalJ = find(~(ind-final))/2;
-	
-	handles.initialJ = initialJ;
-	handles.finalJ = finalJ;
-	handles.final = final;
-	handles.initial = initial;
+    plot(user,'b','LineWidth',3);hold on
+    plot(ref,'r--','LineWidth',3);hold off
+    
+    [X,Y] = ginput(2);
+    if X(1)<0;
+        X(1)=1;
+    end
+    if X(2)>length(ref)
+        X(2)=length(ref);
+    end
+    
+    if(X(1) > 0)
+        temp = ind(ind < X(1));
+        initial = temp(end);
+    end
+    
+    if(X(2) > 0)
+        temp = ind(ind > X(2));
+        final = temp(2);
+    end
+    
+    initialJ = (find(~(ind-initial))+1)/2;
+    finalJ = find(~(ind-final))/2;
+    
+    handles.initialJ = initialJ;
+    handles.finalJ = finalJ;
+    handles.final = final;
+    handles.initial = initial;
 end
 
 timeResponseFig(tempo,user,ref,control,handles.initial,handles.final,handles.file,handles.diretorio)
@@ -512,55 +515,55 @@ xlim([0 length(J)])
 notChosen = 1;
 
 if handles.initialJ == 99 && handles.finalJ == 99;
-	
-	while(notChosen)
-		[X,~] = ginput(2);
-		if X(1)<0;
-			X(1)=1;
-		end
-		if X(2)>length(J)
-			X(2)=length(J);
-		end
-
-			initial = floor(X(1))+1;
-			
-			if initial == 0;
-				initial = 1;
-			end
-			
-			final = floor(X(2))+1;
-			p1 = plot(K(initial:final),J(initial:final),'g','LineWidth',3);
-			button = questdlg('Is This OK ?','Question');
-
-			if strcmp(button,'Yes')==1
-				notChosen = 0;
-				handles.initialJ = initial;
-				handles.finalJ = final;
-			end
-
-			if strcmp(button,'No') == 1
-				delete(p1);
-				uiwait(msgbox('Please Choose Again'));
-			end
-
-	end
-
+    
+    while(notChosen)
+        [X,~] = ginput(2);
+        if X(1)<0;
+            X(1)=1;
+        end
+        if X(2)>length(J)
+            X(2)=length(J);
+        end
+        
+        initial = floor(X(1))+1;
+        
+        if initial == 0;
+            initial = 1;
+        end
+        
+        final = floor(X(2))+1;
+        p1 = plot(K(initial:final),J(initial:final),'g','LineWidth',3);
+        button = questdlg('Is This OK ?','Question');
+        
+        if strcmp(button,'Yes')==1
+            notChosen = 0;
+            handles.initialJ = initial;
+            handles.finalJ = final;
+        end
+        
+        if strcmp(button,'No') == 1
+            delete(p1);
+            uiwait(msgbox('Please Choose Again'));
+        end
+        
+    end
+    
 else
-	initial = handles.initialJ;
-	final = handles.finalJ;
+    initial = handles.initialJ;
+    final = handles.finalJ;
 end
 % 	hold off;
 % 	figure;
-% 	
+%
 % 	plot(K(initial:final),theta(initial:final,1)); hold on;
-% 	plot(K(initial:final),theta(initial:final,2)); 
+% 	plot(K(initial:final),theta(initial:final,2));
 % 	plot(K(initial:final),theta(initial:final,3));
 % 	xlim([0 final]);
-% 	
+%
 % 	hold off;
 guidata(hObject, handles);
 saveIterations(theta(initial:final,:),thetaP(initial:final,:),J(initial:final),bestResponse,tempo,...
-	arquivo,diretorio)
+    arquivo,diretorio)
 
 
 % --------------------------------------------------------------------

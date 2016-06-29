@@ -77,10 +77,10 @@ ind = find(abs(diff(ind))>0);
 % 	ind = ind(1:end-1);
 % end
 
-J = zeros(length(ind)/2,1);
+J = zeros(floor(length(ind)/2),1);
 zeta = J;
 
-theta_ = zeros(length(ind)/2,length(PID0));
+theta_ = zeros(floor(length(ind)/2),length(PID0));
 
 theta = theta_;
 thetaP = theta_;
