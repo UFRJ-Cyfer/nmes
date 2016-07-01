@@ -332,7 +332,7 @@ end
 
 if exist([handles.diretorio handles.file(1:end-4) 'Param.txt'], 'file') == 0
     data = get(handles.paramTable,'data');
-    M = data(1:3,:);
+    M = cell2mat(data(1:3,:));
 else
     Param = NMESAbreParam([handles.file(1:end-4) 'Param.txt'],handles.diretorio);
     data = reshape(Param.ESParamValues,[3 3]);
@@ -354,7 +354,8 @@ set(handles.status,'String','Loading...');
 drawnow;
 
 if found == 0
-    [J, theta, thetaP, bestResponse,user,ref,tempo,ind] = rotinaReconstrucaoJ(alpha,gamma,omega,1/2,PID0,handles.file,handles.diretorio);
+    [J, theta, thetaP, bestResponse,user,ref,tempo,ind] = ...
+        rotinaReconstrucaoJ(alpha,gamma,omega,1/2,PID0,handles.file,handles.diretorio);
 else
     theta = Param.PIDValue;
     [J, ~, ~, bestResponse,user,ref,tempo,ind] = ...

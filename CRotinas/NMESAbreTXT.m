@@ -15,7 +15,7 @@ function [Sinal]=NMESAbreTXT(filename,pathname)
 
 % [s, msg] = replaceinfile(',', '.', [pathname,filename], '-nobak'); %substitui virgula por pontos
 
-[s, msg] = replaceinfile(',', '.', [pathname,filename]); %substitui virgula por pontos
+[s, msg] = replaceinfile(',', '.', [pathname,filename],'-nobak'); %substitui virgula por pontos
 temp = importdata([pathname,filename], '\t', 1);
 Sinal.Dado=temp.data;
 Sinal.Nome=temp.colheaders;

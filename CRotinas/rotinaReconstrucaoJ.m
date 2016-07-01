@@ -1,6 +1,8 @@
-function [J, theta, thetaP, bestResponse,user,ref,control,tempo,ind] = rotinaReconstrucaoJ(alpha,gamma,omega,h,PID0,arquivo,diretorio)
+function [J, theta, thetaP, bestResponse,user,ref,control,tempo,ind] =...
+    rotinaReconstrucaoJ(alpha,gamma,omega,h,PID0,arquivo,diretorio)
 % close all
-clear Jmin
+% clear Jmin
+
 if iscolumn(alpha)
 	alpha = alpha';
 end
@@ -88,6 +90,7 @@ thetaP = theta_;
 theta(1,:) = PID0;
 theta_(1,:) = theta(1,:)-alpha;
 zeta(1) = 0;
+bestResponse = [0 0 0];
 
 for k=1:length(ind)/2
 	
