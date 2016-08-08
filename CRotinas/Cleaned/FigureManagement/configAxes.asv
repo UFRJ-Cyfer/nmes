@@ -1,0 +1,24 @@
+function [] = configAxes(axArmAngle, axReference,...
+                                      axBicepsOutput, axTricepsOutput)
+%CONFIGAXES Summary of this function goes here
+%   Detailed explanation goes here
+LINEWIDTH = 2;
+FONTSIZE = 18;
+
+set(axArmAngle, 'Color','blue');
+set(axReference, 'Color','red');
+
+set(axArmAngle, 'LineStyle','-');
+set(axReference, 'LineStyle','--');
+
+set(axArmAngle, 'LineWidth',LINEWIDTH);
+set(axReference, 'LineWidth',LINEWIDTH);
+
+legend(axArmAngle,'Arm Angle','Reference')
+legend(axReference,'Arm Angle','Reference')
+
+legend(axBicepsOutput,'Arm Angle')
+legend(axTricepsOutput,'Arm Angle')
+
+end
+

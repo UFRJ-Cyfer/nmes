@@ -26,7 +26,7 @@ if sum(strcmpi(prot,{ 'bilatsemfes'}))
 end
 
 %Correção do valor da Corrente
-Sinal.Dado(:,[6,7])=abs(round(Sinal.Dado(:,[6,7])*2.5151));
+Sinal.Dado(:,[6,7])=abs(Sinal.Dado(:,[6,7])*2.5151);
 
 %################################
 %Processando

@@ -15,7 +15,7 @@ function [Param]=NMESAbreParam(filename,pathname)
 
 % [s, msg] = replaceinfile(',', '.', [pathname,filename], '-nobak'); %substitui virgula por pontos
 
-[~, ~] = replaceinfile(',', '.', [pathname,filename],'-nobak'); %substitui virgula por pontos
+replaceinfile(',', '.', [pathname,filename]); %substitui virgula por pontos
 temp = importdata([pathname,filename], '\t', 1);
 
 Param.ESParamValues = temp.data;
