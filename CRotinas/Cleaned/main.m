@@ -89,6 +89,8 @@ function fileList_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns fileList contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from fileList
+    guidata(hObject, handles); 
+
     get(handles.figure1,'SelectionType');
 
     Param=0;Results=0;Old=0;
@@ -100,61 +102,61 @@ function fileList_Callback(hObject, eventdata, handles)
         
         filename = str(val,:);
 
-        if handles.is_dir(handles.sorted_index(val)) 
-            load_listbox(filename,handles)
+        if val <= length(handles.is_dir)    %if is directory
+           load_listbox(filename,handles)
         else
 
-            handles.file = pwd;
-            handles.file = strtrim(handles.file);
+            handles.file = strtrim(filename);
+            handles.diretorio = [strtrim(pwd) '\'];
 
-            if strcmp(handles.diretorio,'Antigo')
+            if strcmp(handles.diretorio,[handles.diretorio(1:end-7) 'Antigo\'])
                 Old = 1;
             end
+            if Old == 0
+                if exist([handles.diretorio handles.file], 'file') == 0
+                    % File does not exist.  Do stuff....
+                    set(handles.status,'String','ERROR');
+                    drawnow;
+                    errordlg('Could not find Data file.');
+            %         uiwait(msgbox('Please Indicate the correct folder'));
+            %         pathname = uigetdir();
+            %         handles.diretorio = [pathname '\'];
+                    Result = 0;
 
-            if exist([handles.diretorio handles.file], 'file') == 0
-                % File does not exist.  Do stuff....
-                set(handles.status,'String','ERROR');
-                drawnow;
-                errordlg('Could not find Data file.');
-        %         uiwait(msgbox('Please Indicate the correct folder'));
-        %         pathname = uigetdir();
-        %         handles.diretorio = [pathname '\'];
-                Result = 0;
+                else
+                    Result=1;
+                end
 
-            else
-                Result=1;
-            end
+                if exist([handles.diretorio handles.file(1:end-4-7) 'Param.txt'],...
+                        'file') == 0
+                    set(handles.status,'String','ERROR');
+                    drawnow;
+                    errordlg('Could not find Parameters file.');
+            %         uiwait(msgbox('Please Indicate the correct folder'));
+            %         pathname = uigetdir();
+            %         handles.diretorio = [pathname '\'];
+                    Param=0;
+                else
+                    Param =1;
+                end
 
-            if exist([handles.diretorio handles.file(1:end-4-7) 'Param.txt'],...
-                    'file') == 0
-                set(handles.status,'String','ERROR');
-                drawnow;
-                errordlg('Could not find Parameters file.');
-        %         uiwait(msgbox('Please Indicate the correct folder'));
-        %         pathname = uigetdir();
-        %         handles.diretorio = [pathname '\'];
-                Param=0;
-            else
-                Param =1;
-            end
-
-            if Param && Result
-                [timeData, controlData] = openFileMain...
-                                    (handles.diretorio,handles.file);
+                if Param && Result
+                    [timeData, controlData] = openFileMain...
+                                        (handles.diretorio,handles.file);
+                     handles.timeData = timeData;
+                     handles.controlData = controlData;
+                end
             end
 
             if Old
                timeData = openOldFiles(handles.diretorio,handles.file); 
+               handles.timeData = timeData;
             end
-
-            handles.timeData = timeData;
-            handles.controlData = controlData;
             plotIntoGUI(handles);
 
         end
     end
     
-    guidata(hObject, handles); 
 
 
 % --- Executes during object creation, after setting all properties.

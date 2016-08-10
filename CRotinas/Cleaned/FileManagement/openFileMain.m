@@ -24,17 +24,31 @@ end
 
 temp = importdata([pathname,filename], '\t', 1);
 
+%OffsetCH1 OffsetCH2 MaxCH1 MaxCH2 LadoCotnrolado Referencia Freqeuncia
+%Duracao
 timeData.pulseParam = temp.data;
 timeData.pulseParamNames = temp.colheaders;
 
 temp = importdata([pathname,filename], '\t', 3);
 
+%   Arm Angle   AngAlvo     dtAmost     dtSum   AmpCH1  AmpCH2
 timeData.timeResponse = temp.data;
 timeData.timeVariables = temp.colheaders;
 timeData.path = pathname;
 timeData.file = filename;
-%   Arm Angle   AngAlvo     dtAmost     dtSum   AmpCH1  AmpCH2
 
+
+
+
+% Corrections due to weird bug with the saved file
+% aux = timeData.timeResponse(:,3);
+% timeData.timeResponse(:,3) = timeData.timeResponse(:,4);
+% timeData.timeResponse(:,4) = aux;
+% 
+% 
+% aux = timeData.timeResponse(:,5);
+% timeData.timeResponse(:,5) = timeData.timeResponse(:,6);
+% timeData.timeResponse(:,6) = aux;
 
 
 
