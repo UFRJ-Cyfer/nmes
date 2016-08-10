@@ -24,8 +24,8 @@ end
 
 temp = importdata([pathname,filename], '\t', 1);
 
-timeData.PulseParam = temp.data;
-timeData.PulseParamNames = temp.colheaders;
+timeData.pulseParam = temp.data;
+timeData.pulseParamNames = temp.colheaders;
 
 temp = importdata([pathname,filename], '\t', 3);
 

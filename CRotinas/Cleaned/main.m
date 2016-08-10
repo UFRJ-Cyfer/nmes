@@ -22,7 +22,7 @@ function varargout = main(varargin)
 
 % Edit the above text to modify the response to help main
 
-% Last Modified by GUIDE v2.5 08-Aug-2016 16:25:13
+% Last Modified by GUIDE v2.5 09-Aug-2016 18:59:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -52,23 +52,19 @@ function main_OpeningFcn(hObject, eventdata, handles, varargin)
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to main (see VARARGIN)
 
-% Choose default command line output for main
-diretorio = './';
-handles.diretorio = diretorio;
-x = dir([diretorio '*.txt']);
-string = [];
-for i=1:length(x)
-    string = char(string,x(i).name);
-end
-set(handles.fileList,'string',string);
-
 handles.initial = 99;
 handles.final = 99;
 
+
+% Choose default command line output for main
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
+load_listbox('./',handles);
+
+
+
 
 % UIWAIT makes main wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
@@ -93,51 +89,70 @@ function fileList_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns fileList contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from fileList
-    Param=0;Results=0;
+    get(handles.figure1,'SelectionType');
+
+    Param=0;Results=0;Old=0;
     
-    str = get(hObject, 'String');
-    val = get(hObject,'Value');
-
-    handles.file = str{val};
-
-    handles.file = strtrim(handles.file);
-
-    if exist([handles.diretorio handles.file], 'file') == 0
-        % File does not exist.  Do stuff....
-        set(handles.status,'String','ERROR');
-        drawnow;
-        errordlg('Could not find Data file.');
-        uiwait(msgbox('Please Indicate the correct folder'));
-%         pathname = uigetdir();
-%         handles.diretorio = [pathname '\'];
-        Result = 0;
+    if strcmp(get(handles.figure1,'SelectionType'),'open')
+    
+        str = get(handles.fileList, 'String');
+        val = get(handles.fileList,'Value');
         
-    else
-        Result=1;
+        filename = str(val,:);
+
+        if handles.is_dir(handles.sorted_index(val)) 
+            load_listbox(filename,handles)
+        else
+
+            handles.file = pwd;
+            handles.file = strtrim(handles.file);
+
+            if strcmp(handles.diretorio,'Antigo')
+                Old = 1;
+            end
+
+            if exist([handles.diretorio handles.file], 'file') == 0
+                % File does not exist.  Do stuff....
+                set(handles.status,'String','ERROR');
+                drawnow;
+                errordlg('Could not find Data file.');
+        %         uiwait(msgbox('Please Indicate the correct folder'));
+        %         pathname = uigetdir();
+        %         handles.diretorio = [pathname '\'];
+                Result = 0;
+
+            else
+                Result=1;
+            end
+
+            if exist([handles.diretorio handles.file(1:end-4-7) 'Param.txt'],...
+                    'file') == 0
+                set(handles.status,'String','ERROR');
+                drawnow;
+                errordlg('Could not find Parameters file.');
+        %         uiwait(msgbox('Please Indicate the correct folder'));
+        %         pathname = uigetdir();
+        %         handles.diretorio = [pathname '\'];
+                Param=0;
+            else
+                Param =1;
+            end
+
+            if Param && Result
+                [timeData, controlData] = openFileMain...
+                                    (handles.diretorio,handles.file);
+            end
+
+            if Old
+               timeData = openOldFiles(handles.diretorio,handles.file); 
+            end
+
+            handles.timeData = timeData;
+            handles.controlData = controlData;
+            plotIntoGUI(handles);
+
+        end
     end
-    
-    if exist([handles.diretorio handles.file(1:end-4-7) 'Param.txt'],...
-            'file') == 0
-        set(handles.status,'String','ERROR');
-        drawnow;
-        errordlg('Could not find Parameters file.');
-        uiwait(msgbox('Please Indicate the correct folder'));
-%         pathname = uigetdir();
-%         handles.diretorio = [pathname '\'];
-        Param=0;
-    else
-        Param =1;
-    end
-    
-    if Param && Result
-        [timeData, controlData] = openFileMain...
-                            (handles.diretorio,handles.file);
-    end
-    
-    handles.timeData = timeData;
-    handles.controlData = controlData;
-    
-    plotIntoGUI;
     
     guidata(hObject, handles); 
 
@@ -161,30 +176,6 @@ function esCaller_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 gui;
-
-
-% --- Executes on selection change in listbox2.
-function listbox2_Callback(hObject, eventdata, handles)
-% hObject    handle to listbox2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: contents = cellstr(get(hObject,'String')) returns listbox2 contents as cell array
-%        contents{get(hObject,'Value')} returns selected item from listbox2
-
-
-% --- Executes during object creation, after setting all properties.
-function listbox2_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to listbox2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: listbox controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
 
 % --------------------------------------------------------------------
 function folderMenu_Callback(hObject, eventdata, handles)
@@ -210,9 +201,9 @@ set(handles.fileList,'string',fileStrings);
 guidata(hObject, handles);
 
 
-% --- Executes on button press in pushbutton2.
-function pushbutton2_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton2 (see GCBO)
+% --- Executes on button press in saveTimeFigure.
+function saveTimeFigure_Callback(hObject, eventdata, handles)
+% hObject    handle to saveTimeFigure (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 figure;

@@ -1,3 +1,5 @@
+function [] = plotIntoGUI(handles)
+
 user = handles.timeData.timeResponse(:,1);
 ref = handles.timeData.timeResponse(:,2);
 
@@ -17,3 +19,4 @@ triceps = handles.timeData.timeResponse(:,6);
 
 plot(handles.controlPlot,time,biceps,'b','LineWidth',2);hold on
 plot(handles.controlPlot,time,triceps,'r--','LineWidth',2);hold off
+end
