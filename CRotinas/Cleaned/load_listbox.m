@@ -1,8 +1,11 @@
 function load_listbox(path,handles)
-
+% 
 cd(strtrim(path))
 temp = dir(pwd);
 handles.diretorio = pwd;
+% clean_path = strtrim(path);
+% temp = dir(strtrim(path));
+% handles.diretorio = strtrim(path);
 
 [sorted_names,sorted_index] = sortrows({temp.name}');
 handles.sorted_index = sorted_index;

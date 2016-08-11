@@ -33,7 +33,9 @@ plot(time,biceps,'b','LineWidth',2);
 hold on
 plot(time,triceps,'g','LineWidth',2);
 minimum = min(min(biceps(biceps>0)), min(triceps(triceps>0)));
-axis([0,inf,minimum,inf]);
+if ~isempty(minimum)
+    axis([0,inf,minimum,inf]);
+end
 legend('Biceps','Triceps');
 xlabel('Time (s)');
 ylabel('Current(mA)');
