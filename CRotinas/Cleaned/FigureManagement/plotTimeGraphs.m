@@ -2,7 +2,7 @@ function [ time, Data ] = plotTimeGraphs( timeData, output_mode )
 %PLOT Summary of this function goes here
 %   Detailed explanation goes here
 FONTSIZE = 18;
-time = (timeData.timeResponse(:,3) - timeData.timeResponse(1,3))/1000;
+time = (timeData.timeResponse(:,4) - timeData.timeResponse(1,4))/1000;
 
 % dtSum = cumsum(timeData.timeResponse(:,4));       %
 % time = (dtSum- dtSum(1))/1000;                    %alternative way
