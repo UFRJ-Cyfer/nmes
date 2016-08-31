@@ -23,8 +23,8 @@ else
     
     if exist([pathname filename(1:end-4-7) 'Param.txt'],...
             'file') == 0
-        set(handles.status,'String','ERROR');
-        drawnow;
+%         set(handles.status,'String','ERROR');
+%         drawnow;
         errordlg('Could not find Parameters file.');
         %         uiwait(msgbox('Please Indicate the correct folder'));
         %         pathname = uigetdir();

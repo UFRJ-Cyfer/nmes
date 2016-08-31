@@ -51,14 +51,26 @@ function gui_OpeningFcn(hObject, eventdata, handles, varargin)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to gui (see VARARGIN)
-diretorio = './';
-handles.diretorio = diretorio;
-x = dir([diretorio '*.txt']);
+if nargin>=4 
+    handles.diretorio = varargin{1}.diretorio;
+    handles.defined = 0;
+    if isfield(varargin{1},'file')
+        handles.file = varargin{1}.file;
+        handles.defined = 1;
+        fileList_Callback(hObject,eventdata,handles);        
+    end
+    
+else
+    diretorio = './';
+    handles.diretorio = diretorio;
+end
+x = dir([handles.diretorio '*.txt']);
 string = [];
 for i=1:length(x)
     string = char(string,x(i).name);
 end
 set(handles.fileList,'string',string);
+
 
 handles.legendS = {'K','Ti','Td'};
 handles.legendP = {'K','Ki','Kd'};
@@ -75,6 +87,8 @@ setappdata(handles.figure1,'slidervalue',0);
 
 % Update handles structure
 guidata(hObject, handles);
+
+
 
 % UIWAIT makes gui wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
@@ -305,12 +319,15 @@ function fileList_Callback(hObject, eventdata, handles)
 % hObject    handle to fileList (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+if handles.defined ==0
 str = get(hObject, 'String');
 val = get(hObject,'Value');
 
 handles.file = str{val};
 
-handles.file = strtrim(handles.file);
+handles.file = strtrim(handles.file);    
+handles.defined = 0;
+end
 
 found = 0;
 

@@ -1,0 +1,15 @@
+function [ handles ] = extractESData( handles )
+%EXTRACTESDATA Summary of this function goes here
+%   Detailed explanation goes here+
+
+handles.J = handles.controlData.Values(:,4);
+handles.theta = handles.controlData.PID;
+
+    for k = 1:size(handles.theta,1)
+        handles.thetaP(k,:) = ...
+            [handles.theta(k,1) ...
+            handles.theta(k,1)/handles.theta(k,2) handles.theta(k,1)*theta(k,3)];
+    end
+
+end
+

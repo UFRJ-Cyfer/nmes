@@ -4,8 +4,9 @@ guidata(handles.figure1,handles)
 user = handles.timeData.timeResponse(:,1);
 ref = handles.timeData.timeResponse(:,2);
 
-time = (handles.timeData.timeResponse(:,4) - ...
-    handles.timeData.timeResponse(1,4))/1000;
+i = find(handles.timeData.timeResponse(1,:) > 1000);
+time = (handles.timeData.timeResponse(:,i) - ...
+    handles.timeData.timeResponse(1,i))/1000;
 
 idx = find(ref>150);
 ref(idx)= ref(idx-1);

@@ -1,34 +1,17 @@
-function [J, theta, thetaP, bestResponse,user,ref,control,tempo,ind] =...
-    rotinaReconstrucaoJ(alpha,gamma,omega,h,PID0,arquivo,diretorio)
+function [handles] = reconstructCost(handles)
 % close all
 % clear Jmin
 
-if iscolumn(alpha)
-	alpha = alpha';
-end
-if iscolumn(gamma)
-	gamma = gamma';
-end
-if iscolumn(omega)
-	omega = omega';
-end
-if iscolumn(PID0)
-	PID0 = PID0';
-end
+alpha = handles.M(2,:);
+gamma = handles.M(3,:);
+omega = handles.M(4,:);
+PID0 = handles.M(5,:);
 
+h = handles.controlData.ParamValues(10);
+To = handles.controlData.ParamValues(11);
 
 
 PID0 = [PID0(1) PID0(1)/PID0(2) PID0(1)*PID0(3)];
-
-% diretorio = [cd];
-% [arquivo, diretorio] = uigetfile('*.txt','Escolha o Arquivo',diretorio);
-
-[Sinal]=NMESAbreTXT(arquivo, diretorio); %Abre os arquivos e determina o formato
-Sinal.Dado(:,[6,7])=abs(round(Sinal.Dado(:,[6,7])*2.5151));
-
-control = [Sinal.Dado(:,6) Sinal.Dado(:,7) ...
-	ones(size(Sinal.Dado(:,6)))*Sinal.Param(4)...
-	ones(size(Sinal.Dado(:,6)))*Sinal.Param(5)];
 
 
 % figure('Color',[1 1 1],'name',[Sinal.File],'NumberTitle','off','units','normalized','outerposition',[0 0 1 1]);
@@ -50,26 +33,18 @@ control = [Sinal.Dado(:,6) Sinal.Dado(:,7) ...
 % 
 % To = str2double(answer{1});
 
-To = 5;
-
-if mean(Sinal.Dado(:,1)) > mean(Sinal.Dado(:,2))
-	arm = 1;
-else
-	arm = 2;
-end
-
-user = Sinal.Dado(:,arm);
+user = handles.timeData.timeResponse(:,1);
 idx = find(user>150);
 user(idx)= user(idx-1);
 
-ref = Sinal.Dado(:,3);
+ref = handles.timeData.timeResponse(:,2);
 idx = find(ref>150);
 ref(idx)= ref(idx-1);
 
-tempo=(Sinal.Dado(:,8)-Sinal.Dado(1,8))/1000;
+tempo = (handles.timeData.timeResponse(:,1) - ...
+	handles.timeData.timeResponse(1,4))/1000;
 
 err = ref - user;
-
 
 ind = ref > 0;
 
@@ -94,7 +69,7 @@ bestResponse = [0 0 0];
 
 for k=1:length(ind)/2
 	
-	cSum = cumsum(Sinal.Dado(ind(2*k-1):ind(2*k),5))/1000;
+	cSum = cumsum(Sinal.Dado(ind(2*k-1):ind(2*k),3))/1000;
 	T0_begin = find(cSum >= To,1);
 	int_err = err(ind(2*k-1):ind(2*k));
     int_err = int_err.^2/(max(ref))^2/(20-To);
@@ -115,17 +90,21 @@ for k=1:length(ind)/2
 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
 	end
 	
-% 	if k == 4
-% 		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
-% 	end
-	
-	
 end
-
 
 for k = 1:size(theta,1)
 	thetaP(k,:) = [theta(k,1) theta(k,1)/theta(k,2) theta(k,1)*theta(k,3)];
 end
+
+handles.theta = theta;
+handles.thetaP = thetaP;
+handles.bestResponse = bestResponse;
+%handles.user = user;
+%handles.ref = ref;
+%handles.tempo = tempo;
+handles.ind = ind;
+handles.J = J;
+
 
 end
 
