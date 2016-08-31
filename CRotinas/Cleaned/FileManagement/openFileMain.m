@@ -64,13 +64,17 @@ if Result
     %OffsetCH1 OffsetCH2 MaxCH1 MaxCH2 LadoCotnrolado Referencia Freqeuncia
     %Duracao
     timeData.pulseParam = temp.data;
+    if sum(strcmp(fieldnames(temp), 'colheaders')) == 1
     timeData.pulseParamNames = temp.colheaders;
+    end
     
     temp = importdata([pathname,filename], '\t', 3);
     
     %   Arm Angle   AngAlvo     dtAmost     dtSum   AmpCH1  AmpCH2
     timeData.timeResponse = temp.data;
+    if sum(strcmp(fieldnames(temp), 'colheaders')) == 1
     timeData.timeVariables = temp.colheaders;
+    end
     timeData.path = pathname;
     timeData.file = filename;
     

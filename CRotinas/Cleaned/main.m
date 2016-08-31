@@ -149,18 +149,7 @@ function folderMenu_Callback(hObject, eventdata, handles)
 folder = uigetdir();
 handles.diretorio = [folder '\'];
 
-x = dir([handles.diretorio '*.txt']);
-fileStrings = [];
-
-for i=1:length(x)
-    if isempty(strfind(x(i).name,'Param'))
-        fileStrings{end+1}= x(i).name;
-    end
-end
-
-handles.fileStringList = fileStrings;
-
-set(handles.fileList,'string',fileStrings);
+load_listbox(handles.diretorio,handles);
 
 guidata(hObject, handles);
 
@@ -172,3 +161,5 @@ function saveTimeFigure_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 figure;
 userInputScript;
+saveTimeResponse(handles)
+
