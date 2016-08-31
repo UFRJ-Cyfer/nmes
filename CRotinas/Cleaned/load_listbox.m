@@ -1,8 +1,24 @@
-function load_listbox(path,handles)
+function handles = load_listbox(path,handles)
 % 
-cd(strtrim(path))
-temp = dir(pwd);
-handles.diretorio = pwd;
+if strcmp(strtrim(path),'.') || strcmp(strtrim(path),'.\')
+    cd(strtrim(path))
+    handles.diretorio = [strtrim(pwd) '\'];
+    
+else if strcmp(strtrim(path),'..')
+        dir_separator = strfind(handles.diretorio,'\');
+        if isempty(dir_separator)
+            dir_separator = strfind(handles.diretorio,'/');
+        end
+    handles.diretorio = handles.diretorio(1:dir_separator(end-1));
+    else
+    handles.diretorio = [handles.diretorio strtrim(path) '\'];
+    end
+end
+
+
+    
+temp = dir(handles.diretorio);
+
 % clean_path = strtrim(path);
 % temp = dir(strtrim(path));
 % handles.diretorio = strtrim(path);
@@ -16,7 +32,7 @@ directory_strings = sorted_names(handles.is_dir);
 handles.is_dir = ones(1,length(directory_strings));
 
 % textFiles inside directory
-textFiles = dir([pwd  '\' '*.txt']);
+textFiles = dir([handles.diretorio '*.txt']);
 fileStrings = char(directory_strings);
 for i=1:length(textFiles)
     fileStrings = char(fileStrings,textFiles(i).name);
@@ -25,4 +41,5 @@ end
 guidata(handles.figure1,handles)
 set(handles.fileList,'String',fileStrings,...
     'Value',1);
+
 end

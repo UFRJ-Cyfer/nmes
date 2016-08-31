@@ -60,8 +60,10 @@ handles.final = 99;
 handles.output = hObject;
 
 % Update handles structure
+handles = load_listbox('.',handles);
+
 guidata(hObject, handles);
-load_listbox('./',handles);
+
 
 
 
@@ -89,7 +91,6 @@ function fileList_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns fileList contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from fileList
-    guidata(hObject, handles); 
 
     get(handles.figure1,'SelectionType');
     
@@ -101,11 +102,10 @@ function fileList_Callback(hObject, eventdata, handles)
         filename = str(val,:);
 
         if val <= length(handles.is_dir)    %if is directory
-           load_listbox(filename,handles)
+           handles = load_listbox(filename,handles);
         else
 
             handles.file = strtrim(filename);
-            handles.diretorio = [strtrim(pwd) '\'];
             
             [timeData, controlData] = openFileMain(handles.diretorio, ...
                                                    handles.file);
@@ -116,6 +116,8 @@ function fileList_Callback(hObject, eventdata, handles)
 
         end
     end
+    guidata(hObject, handles); 
+
     
 
 
