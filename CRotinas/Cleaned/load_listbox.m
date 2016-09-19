@@ -30,7 +30,11 @@ directory_strings = sorted_names(handles.is_dir);
 handles.is_dir = ones(1,length(directory_strings));
 
 % textFiles inside directory
-textFiles = dir([handles.diretorio '*Results.txt']);
+if strcmp(handles.diretorio,[handles.diretorio(1:end-7) 'Antigo\']) == 1
+    textFiles = dir([handles.diretorio '*.txt']);
+else
+    textFiles = dir([handles.diretorio '*Results.txt']);
+end
 
 fileStrings = char(directory_strings);
 for i=1:length(textFiles)

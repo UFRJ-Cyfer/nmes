@@ -34,6 +34,11 @@ function [ timeData ] = openOldFiles ( pathname, filename )
     % Reference
     timeData.timeResponse(:,2) = temp.data(:,3);
     
+    ind = timeData.timeResponse(:,2) > 0;
+    ind = find(diff(abs(ind)));
+    
+    timeData.ind = ind;
+    
     % dtSum and dtAmost
     timeData.timeResponse(:,3) = temp.data(:,8);
     timeData.timeResponse(:,4) = temp.data(:,5);
