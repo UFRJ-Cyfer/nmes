@@ -112,7 +112,10 @@ function fileList_Callback(hObject, eventdata, handles)
             handles.timeData = timeData;
             handles.controlData = controlData;
             
+            updateGUI(handles);
+            
             plotIntoGUI(handles);
+            vertical_cursors;
 
         end
     end
@@ -159,7 +162,7 @@ function saveTimeFigure_Callback(hObject, eventdata, handles)
 % hObject    handle to saveTimeFigure (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-figure;
+figure(1);
 userInputScript;
 saveTimeResponse(handles)
 

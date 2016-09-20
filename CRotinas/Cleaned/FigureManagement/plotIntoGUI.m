@@ -4,7 +4,7 @@ guidata(handles.figure1,handles)
 user = handles.timeData.timeResponse(:,1);
 ref = handles.timeData.timeResponse(:,2);
 
-i = find(handles.timeData.timeResponse(1,:) > 1000);
+i = find(handles.timeData.timeResponse(1,:) > 10000);
 time = (handles.timeData.timeResponse(:,i) - ...
     handles.timeData.timeResponse(1,i))/1000;
 
@@ -24,8 +24,6 @@ ylabel('Angle (Degrees)');
 grid on;
 hold off;
 
-
-
 biceps = handles.timeData.timeResponse(:,5);
 triceps = handles.timeData.timeResponse(:,6);
 
@@ -34,8 +32,9 @@ plot(time,biceps,'b','LineWidth',2);
 hold on
 plot(time,triceps,'g','LineWidth',2);
 minimum = min(min(biceps(biceps>0)), min(triceps(triceps>0)));
+maximum = max(max(biceps),max(triceps));
 if ~isempty(minimum)
-    axis([0,inf,minimum,inf]);
+    axis([0,inf,minimum,maximum]);
 end
 legend('Biceps','Triceps');
 xlabel('Time (s)');

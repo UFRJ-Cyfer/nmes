@@ -52,8 +52,9 @@ if Param
     end
     
     if strcmp(controlType,'PIDES')
-        [controlData] = openFileES(pathname, [filename(1:end-4-7) 'Param.txt']);
+        [controlData] = openFileES(pathname, [filename(1:end-4-7) 'Param.txt']);  
     end
+    controlData.controlType = controlType;
 end
 
 if Result

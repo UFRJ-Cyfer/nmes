@@ -3,6 +3,10 @@ function saveTimeResponse(handles)
 
 user = handles.timeData.timeResponse(:,1);
 ref = handles.timeData.timeResponse(:,2);
+
+idx = find(abs(ref)>150);
+ref(idx)= ref(idx-1);
+
 tempo = (handles.timeData.timeResponse(:,4) - ...
         handles.timeData.timeResponse(1,4))/1000;
 initial = handles.initial;
@@ -17,11 +21,7 @@ diretorio = handles.diretorio;
 file = handles.file;
 
 timeResponse = figure(3);
-str = inputdlg('Input Image Title','ImageTitle');
 
-if isempty(str) == 0
-	title(str)
-end
 
 subplot(3,1,[1 2]);
 plot(tempo(initial:final)-tempo(initial), ...
@@ -29,7 +29,11 @@ plot(tempo(initial:final)-tempo(initial), ...
 plot(tempo(initial:final)-tempo(initial),...
 	ref(initial:final),'r--','LineWidth', 2);hold off;
 
-axis([0, inf, -inf,70])
+if max(ref(initial:final)) > 70
+   axis([0,inf,-inf, max(ref)+10]); 
+else
+    axis([0, inf, -inf,70])
+end
 %     plot(tempo(R.Trechos(:,1)),Sinal.Dado(R.Trechos(:,1),indRef),...
 %         'r*','MarkerSize',10,'LineWidth',2);
 %     plot(tempo(R.Trechos(:,2)),Sinal.Dado(R.Trechos(:,2),indRef),...
@@ -50,6 +54,12 @@ set(h,'FontSize',18);
 
 set(gca, 'FontSize', 18)
 xlabel('Time (s)')
+
+str = inputdlg('Input Image Title','ImageTitle');
+
+if isempty(str) == 0
+	title(str)
+end
 
 subplot(3,1,3);
 
@@ -81,6 +91,10 @@ triceps = control(:,2);
 	set(gca, 'FontSize', 18)
 
 
+    exist_folder = exist([diretorio 'Images\'],'dir');
+    if exist_folder == 0
+        mkdir([diretorio 'Images\']);
+    end
 % out = msgbox('Starting to Save Time Response');
     screen_size = get(0, 'ScreenSize');
 	set(gcf,'color','w');
