@@ -1,6 +1,7 @@
 function plotIntoGUI(handles)
 guidata(handles.figure1,handles)
-
+roundTargets = 0:1:255;
+roundTargets = roundTargets/2.5151;
 user = handles.timeData.timeResponse(:,1);
 ref = handles.timeData.timeResponse(:,2);
 
@@ -26,6 +27,9 @@ hold off;
 
 biceps = handles.timeData.timeResponse(:,5);
 triceps = handles.timeData.timeResponse(:,6);
+
+biceps = interp1(roundTargets,roundTargets,biceps,'nearest');
+triceps = interp1(roundTargets,roundTargets,triceps,'nearest');
 
 axes(handles.controlPlot);
 plot(time,biceps,'b','LineWidth',2);
