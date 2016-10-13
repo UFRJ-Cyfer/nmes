@@ -2,13 +2,13 @@ function [handles] = reconstructCost(handles)
 % close all
 % clear Jmin
 
-alpha = handles.M(2,:);
-gamma = handles.M(3,:);
-omega = handles.M(4,:);
-PID0 = handles.M(5,:);
+alpha = handles.M(:,2)';
+gamma = handles.M(:,3)';
+omega = handles.M(:,4)';
+PID0 = handles.M(:,1)';
 
-h = handles.controlData.ParamValues(10);
-To = handles.controlData.ParamValues(11);
+h = 0.5;
+To = 5;
 
 
 PID0 = [PID0(1) PID0(1)/PID0(2) PID0(1)*PID0(3)];
@@ -41,8 +41,12 @@ ref = handles.timeData.timeResponse(:,2);
 idx = find(ref>150);
 ref(idx)= ref(idx-1);
 
-tempo = (handles.timeData.timeResponse(:,1) - ...
-	handles.timeData.timeResponse(1,4))/1000;
+[~, index] = find( handles.timeData.timeResponse(1,:) > 10000);
+
+tempo = (handles.timeData.timeResponse(:,index) - ...
+	handles.timeData.timeResponse(1,index))/1000;
+
+dts = handles.timeData.timeResponse(:,4);
 
 err = ref - user;
 
@@ -69,7 +73,7 @@ bestResponse = [0 0 0];
 
 for k=1:length(ind)/2
 	
-	cSum = cumsum(Sinal.Dado(ind(2*k-1):ind(2*k),3))/1000;
+	cSum = cumsum(dts(ind(2*k-1):ind(2*k)))/1000;
 	T0_begin = find(cSum >= To,1);
 	int_err = err(ind(2*k-1):ind(2*k));
     int_err = int_err.^2/(max(ref))^2/(20-To);
@@ -99,9 +103,11 @@ end
 handles.theta = theta;
 handles.thetaP = thetaP;
 handles.bestResponse = bestResponse;
-%handles.user = user;
-%handles.ref = ref;
-%handles.tempo = tempo;
+
+handles.user = user;
+handles.ref = ref;
+handles.tempo = tempo;
+
 handles.ind = ind;
 handles.J = J;
 

@@ -328,9 +328,9 @@ function [imageData, alpha] = export_fig(varargin)
         if using_hg2(fig) && isvector(options)
             % Set the FontWeight of axes labels/titles to 'normal'
             % Fix issue #69: set non-bold font only if the string contains symbols (\beta etc.)
-            texLabels = findall(fig, 'type','text', 'FontWeight','bold');
-            symbolIdx = ~cellfun('isempty',strfind({texLabels.String},'\'));
-            set(texLabels(symbolIdx), 'FontWeight','normal');
+%             texLabels = findall(fig, 'type','text', 'FontWeight','bold');
+%             symbolIdx = ~cellfun('isempty',strfind({texLabels.String},'\'));
+%             set(texLabels(symbolIdx), 'FontWeight','normal');
         end
     catch
         % ignore

@@ -8,10 +8,12 @@ if strcmp(pathname,[pathname(1:end-7) 'Antigo\']) &&...
     
     timeData = openOldFiles(pathname,filename);
     controlData = [];
+    handles.old = 1;
 else
+    handles.old = 0;
     if exist([pathname filename], 'file') == 0
         % File does not exist.  Do stuff....
-        set(handles.status,'String','ERROR');
+%         set(handles.status,'String','ERROR');
         drawnow;
         errordlg('Could not find Data file.');
         %         uiwait(msgbox('Please Indicate the correct folder'));
@@ -78,6 +80,12 @@ if Result
     end
     timeData.path = pathname;
     timeData.file = filename;
+    
+    ind = timeData.timeResponse(:,2) > 0;
+    ind = find(diff(abs(ind)));
+    
+    timeData.ind = ind;
+    
     
 end
 

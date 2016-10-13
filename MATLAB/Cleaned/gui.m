@@ -51,6 +51,7 @@ function gui_OpeningFcn(hObject, eventdata, handles, varargin)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to gui (see VARARGIN)
+handles.defined = 0;
 if nargin>=4 
     handles.diretorio = varargin{1}.diretorio;
     handles.defined = 0;

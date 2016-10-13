@@ -22,7 +22,7 @@ function varargout = main(varargin)
 
 % Edit the above text to modify the response to help main
 
-% Last Modified by GUIDE v2.5 09-Aug-2016 18:59:45
+% Last Modified by GUIDE v2.5 29-Sep-2016 23:34:50
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -54,13 +54,15 @@ function main_OpeningFcn(hObject, eventdata, handles, varargin)
 
 handles.initial = 99;
 handles.final = 99;
-
+handles.subplot = 0;
 
 % Choose default command line output for main
 handles.output = hObject;
 
 % Update handles structure
 handles = load_listbox('.',handles);
+set(handles.fileList,'Max',100,'Min',0);
+
 
 guidata(hObject, handles);
 
@@ -112,7 +114,8 @@ function fileList_Callback(hObject, eventdata, handles)
             handles.timeData = timeData;
             handles.controlData = controlData;
             
-            updateGUI(handles);
+%             updateGUI(handles);
+            
             
             plotIntoGUI(handles);
             vertical_cursors;
@@ -166,3 +169,17 @@ figure(1);
 userInputScript;
 saveTimeResponse(handles)
 
+
+
+% --- Executes on button press in subplotCheck.
+function subplotCheck_Callback(hObject, eventdata, handles)
+% hObject    handle to subplotCheck (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+if (get(hObject,'Value') == get(hObject,'Max'))
+    handles.subplot = 1;
+else
+    handles.subplot = 0;
+end
+guidata(hObject, handles);
+% Hint: get(hObject,'Value') returns toggle state of subplotCheck

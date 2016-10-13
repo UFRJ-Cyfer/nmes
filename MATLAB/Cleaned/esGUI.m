@@ -54,7 +54,7 @@ function esGUI_OpeningFcn(hObject, eventdata, handles, varargin)
 
 % Choose default command line output for esGUI
 handles.legendS = {'K','Ti','Td'};
-handles.legendP = {'K','Ki','Kd'};
+handles.legendP = {'Kp','Ki','Kd'};
 handles.initial = 99;
 handles.final = 99;
 handles.initialJ = 99;
@@ -89,20 +89,6 @@ function varargout = esGUI_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on button press in saveTimeFigure.
-function saveTimeFigure_Callback(hObject, eventdata, handles)
-% hObject    handle to saveTimeFigure (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in saveIterations.
-function saveIterations_Callback(hObject, eventdata, handles)
-% hObject    handle to saveIterations (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
 % --- Executes on selection change in fileList.
 function fileList_Callback(hObject, eventdata, handles)
 % hObject    handle to fileList (see GCBO)
@@ -134,7 +120,74 @@ function fileList_Callback(hObject, eventdata, handles)
             handles = plotIntoGUI_ES(handles);
         end
     end
+    
     guidata(hObject, handles); 
+
+
+
+% --- Executes on button press in saveTimeFigure.
+function saveTimeFigure_Callback(hObject, eventdata, handles)
+% hObject    handle to saveTimeFigure (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)  
+    userInputScript;
+
+    saveTimeES;
+
+
+% --- Executes on button press in saveIterations.
+function saveIterations_Callback(hObject, eventdata, handles)
+% hObject    handle to saveIterations (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)if handles.initial == 99 && handles.final ==99
+
+figure();
+K = 0:1:length(handles.J)-1;
+J = handles.J;
+plot(K,handles.J,'k','LineWidth',1); hold on
+xlim([0 length(handles.J)])
+notChosen = 1;
+
+if handles.initialJ == 99 && handles.finalJ == 99;
+    
+    while(notChosen)
+        [X,~] = ginput(2);
+        if X(1)<0;
+            X(1)=1;
+        end
+        if X(2)>length(J)
+            X(2)=length(J);
+        end
+        
+        initial = floor(X(1))+1;
+        
+        if initial == 0;
+            initial = 1;
+        end
+        
+        final = floor(X(2))+1;
+        p1 = plot(K(initial:final),J(initial:final),'g','LineWidth',3);
+        button = questdlg('Is This OK ?','Question');
+        
+        if strcmp(button,'Yes')==1
+            notChosen = 0;
+            handles.initialJ = initial;
+            handles.finalJ = final;
+        end
+        
+        if strcmp(button,'No') == 1
+            delete(p1);
+            uiwait(msgbox('Please Choose Again'));
+        end
+        
+    end
+    
+else
+    initial = handles.initialJ;
+    final = handles.finalJ;
+end
+    saveITES(handles);
+
 
 
 % --- Executes during object creation, after setting all properties.

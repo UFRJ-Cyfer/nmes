@@ -38,7 +38,7 @@ else
 end
 
 if found == 0
-    [handles] = reconstructCost(handles);
+    handles = reconstructCost(handles);
 else
     handles = extractESData(handles);
 end
@@ -62,11 +62,11 @@ legend('J(k)');
 
 
 axes(handles.bestTimeResponse);
-plot(handles.bestTimeResponse,handles.timeBestResponse,...
-    handles.bestResponse(:,1),'b'); hold on
+plot(handles.bestTimeResponse,handles.bestResponse(:,1),...
+    handles.bestResponse(:,2),'b'); hold on
 
-plot(handles.bestTimeResponse,handles.timeBestResponse,...
-handles.bestResponse(:,2),'r-.');hold off
+plot(handles.bestTimeResponse,handles.bestResponse(:,1),...
+handles.bestResponse(:,3),'r-.');hold off
 
 legend('Arm Angle','Reference')
 
