@@ -1,0 +1,74 @@
+\select@language {brazil}
+\contentsline {paragraph}{}{iv}{section*.1}
+\contentsline {paragraph}{}{iv}{section*.2}
+\contentsline {paragraph}{}{iv}{section*.3}
+\contentsline {paragraph}{}{v}{section*.4}
+\contentsline {paragraph}{}{vi}{section*.5}
+\contentsline {paragraph}{}{vii}{section*.6}
+\contentsline {paragraph}{}{vii}{section*.7}
+\contentsline {paragraph}{}{viii}{section*.8}
+\contentsline {paragraph}{}{viii}{section*.9}
+\contentsline {paragraph}{}{ix}{section*.10}
+\contentsline {paragraph}{}{ix}{section*.11}
+\contentsline {paragraph}{}{ix}{section*.12}
+\contentsline {paragraph}{}{ix}{section*.13}
+\contentsline {paragraph}{}{ix}{section*.14}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Tema}{1}{section.1.1}
+\contentsline {paragraph}{}{1}{section*.18}
+\contentsline {paragraph}{}{1}{section*.19}
+\contentsline {paragraph}{}{1}{section*.20}
+\contentsline {paragraph}{}{1}{section*.21}
+\contentsline {section}{\numberline {1.2}Delimita\IeC {\c c}\IeC {\~a}o}{1}{section.1.2}
+\contentsline {paragraph}{}{1}{section*.22}
+\contentsline {section}{\numberline {1.3}Justificativa}{1}{section.1.3}
+\contentsline {paragraph}{}{1}{section*.23}
+\contentsline {section}{\numberline {1.4}Objetivos}{2}{section.1.4}
+\contentsline {paragraph}{}{2}{section*.24}
+\contentsline {section}{\numberline {1.5}Metodologia}{2}{section.1.5}
+\contentsline {paragraph}{}{2}{section*.25}
+\contentsline {section}{\numberline {1.6}Descri\IeC {\c c}\IeC {\~a}o}{2}{section.1.6}
+\contentsline {paragraph}{}{2}{section*.26}
+\contentsline {paragraph}{}{2}{section*.27}
+\contentsline {paragraph}{}{2}{section*.28}
+\contentsline {paragraph}{}{2}{section*.29}
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Biom\IeC {\'e}dica}{3}{section.2.1}
+\contentsline {paragraph}{}{3}{section*.30}
+\contentsline {subsection}{\numberline {2.1.1}Acidente Vascular Cerebral}{3}{subsection.2.1.1}
+\contentsline {paragraph}{}{3}{section*.31}
+\contentsline {paragraph}{}{3}{section*.32}
+\contentsline {subsection}{\numberline {2.1.2}Espasticidade}{4}{subsection.2.1.2}
+\contentsline {paragraph}{}{4}{section*.34}
+\contentsline {paragraph}{}{4}{section*.36}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Escala de Ashworth}{4}{subsubsection.2.1.2.1}
+\contentsline {paragraph}{}{4}{section*.37}
+\contentsline {subsubsection}{\numberline {2.1.2.2}Escala de Rankin Modificada}{4}{subsubsection.2.1.2.2}
+\contentsline {paragraph}{}{4}{section*.39}
+\contentsline {chapter}{\numberline {3}Metodologia}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Instrumenta\IeC {\c c}\IeC {\~a}o}{6}{section.3.1}
+\contentsline {paragraph}{}{6}{section*.41}
+\contentsline {subsection}{\numberline {3.1.1}Eletroestimulador}{6}{subsection.3.1.1}
+\contentsline {paragraph}{}{6}{section*.42}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Pulso de Estimula\IeC {\c c}\IeC {\~a}o}{6}{subsubsection.3.1.1.1}
+\contentsline {paragraph}{}{7}{section*.44}
+\contentsline {subsubsection}{\numberline {3.1.1.2}Eletrodos de Contato}{7}{subsubsection.3.1.1.2}
+\contentsline {subsection}{\numberline {3.1.2}Goni\IeC {\^o}metro}{7}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Interface com o Usu\IeC {\'a}rio}{7}{subsection.3.1.3}
+\contentsline {paragraph}{}{7}{section*.47}
+\contentsline {paragraph}{}{8}{section*.48}
+\contentsline {subsubsection}{\numberline {3.1.3.1}\textit {Feedback} Visual}{8}{subsubsection.3.1.3.1}
+\contentsline {paragraph}{}{8}{section*.50}
+\contentsline {section}{\numberline {3.2}Testes}{8}{section.3.2}
+\contentsline {paragraph}{}{8}{section*.51}
+\contentsline {paragraph}{}{9}{section*.52}
+\contentsline {subsection}{\numberline {3.2.1}Protocolo}{9}{subsection.3.2.1}
+\contentsline {paragraph}{}{9}{section*.54}
+\contentsline {paragraph}{}{9}{section*.55}
+\contentsline {paragraph}{}{10}{section*.57}
+\contentsline {paragraph}{}{10}{section*.58}
+\contentsline {paragraph}{}{10}{section*.59}
+\contentsline {paragraph}{}{11}{section*.60}
+\contentsline {paragraph}{}{11}{section*.61}
+\contentsline {paragraph}{}{11}{section*.62}
+\contentsline {chapter}{Bibliografia}{12}{section*.62}

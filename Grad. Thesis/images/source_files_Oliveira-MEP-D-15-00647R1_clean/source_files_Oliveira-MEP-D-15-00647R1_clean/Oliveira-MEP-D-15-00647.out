@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Prototype and Experimental Setup}{}% 2
+\BOOKMARK [1][-]{section.3}{Empirical Model for the Open-Loop System}{}% 3
+\BOOKMARK [1][-]{section.4}{Control Objective and Experimental Protocol}{}% 4
+\BOOKMARK [1][-]{section.5}{Sliding Mode Control via Time-scaling}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Background}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Time-scaling for control design}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{The singular case: =0}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.4}{Controller scaled parameters: =0}{section.5}% 9
+\BOOKMARK [1][-]{section.6}{Experimental Results}{}% 10
+\BOOKMARK [2][-]{subsection.6.1}{Bilateral symmetrical motion}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.2}{Unilateral movements}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.3}{Experiments with Stroke Patients}{section.6}% 13
+\BOOKMARK [1][-]{section.7}{Discussions and Conclusions}{}% 14

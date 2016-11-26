@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt,oneside,openany]{book}	
+
+\usepackage{layout}
+\usepackage[english,brazil]{babel}
+\setlength{\textheight}{25.0 cm}
+
+
+\usepackage{indentfirst}		% for indent
+
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
+
+
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+
+
+\usepackage{tabularx}
+
+\graphicspath{{./images/}}
+\usepackage{pstricks,pst-node,pst-tree}
+\usepackage{alltt}
+%\usepackage{makeidx}
+%\makeindex
+\usepackage[figuresright]{rotating} % for saydways tables and figures
+\usepackage{enumerate}			% for configuration of enumerate environment
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{portland,multirow}
+
+\setcounter{secnumdepth}{3}	% numeracao ate subsubsecao
+\setcounter{tocdepth}{2}	% indice ate subsubsecao
+
+\usepackage{longtable}
+
+
+
+
+\begin{document}
+	
+
+\frontmatter
+
+\thispagestyle{empty}
+
+\input{cover}
+
+%\pagebreak            
+
+\input{preambulo}
+
+% Table of Contents
+% ---------------------------------------------------------------
+\tableofcontents
+% ---------------------------------------------------------------
+% Lista de figuras
+% ---------------------------------------------------------------
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de Figuras}
+\listoffigures
+% ---------------------------------------------------------------
+% Lista de Tabelas
+% ---------------------------------------------------------------
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de Tabelas}
+\listoftables
+
+\mainmatter
+\cleardoublepage
+% ---------------------------------------------------------------
+% Chapter 1 - Introdução
+% ---------------------------------------------------------------
+\chapter{Introdução}
+\label{intro_cap1}
+\input{intro}
+
+% ---------------------------------------------------------------
+% Chapter 2 - Background Info
+% ---------------------------------------------------------------
+\chapter{Background}
+	\label{background_cap2}
+	\input{background}
+	
+	
+
+% ---------------------------------------------------------------
+% Chapter 3 - Metodologia
+% ---------------------------------------------------------------
+	\chapter{Metodologia}
+	\label{Metodologia_cap3}
+	\input{Metodologia}
+
+% ---------------------------------------------------------------
+% Bibliografia
+% ---------------------------------------------------------------
+\normalsize
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliographystyle{coppe}
+\bibliography{biblio}
+
+% ---------------------------------------------------------------
+% Apêndices 
+% ---------------------------------------------------------------
+\appendix
+% ---------------------------------------------------------------
+% Apêndice A
+% ---------------------------------------------------------------
+%	\chapter{O que é um apêndice}
+%	\label{ApendiceA}
+%	\input{ApendiceA}
+% ---------------------------------------------------------------
+% Apêndice B
+% ---------------------------------------------------------------
+%	\chapter{Encadernação do Projeto de Graduação}
+%	\label{ApendiceB}
+%	\input{ApendiceB}
+% ---------------------------------------------------------------
+% Apêndice C
+% ---------------------------------------------------------------
+%	\chapter{O que é um anexo}
+%	\label{ApendiceC}
+%	\input{ApendiceC}   
+
+\backmatter
+\end{document}

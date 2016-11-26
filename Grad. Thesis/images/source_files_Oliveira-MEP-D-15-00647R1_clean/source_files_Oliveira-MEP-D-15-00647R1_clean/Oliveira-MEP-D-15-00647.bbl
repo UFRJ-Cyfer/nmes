@@ -1,0 +1,284 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{D:2008}
+R.~Dolhem, Histoire de l'\'{e}lectrostimulation en m\'{e}decine et en
+  r\'{e}\'{e}ducation: the history of electrostimulation in rehabilitation
+  medicine, Annales de R\'{e}adaptation et de M\'{e}decine Physique 51 (2008)
+  427--431.
+
+\bibitem{M:2010}
+N.~A. Maffiuletti, Physiological and methodological considerations for the use
+  of neuromuscular electrical stimulation, European Journal of Applied
+  Physiology 110 (2010) 223--234.
+
+\bibitem{SC:2007}
+L.~R. Sheffler, J.~Chae, Neuromuscular electrical stimulation in
+  neurorehabilitation, Muscle Nerve 35 (2007) 562--590.
+
+\bibitem{Seel2016_CEP}
+T.~Seel, C.~Werner, J.~Raisch, T.~Schauer, Iterative learning control of a drop
+  foot neuroprosthesis -- generating physiological foot motion in paretic gait
+  by automatic feedback control, Control Engineering Practice 48 (2016) 87--97.
+
+\bibitem{R:2003}
+D.~N. Rushton, Functional electrical stimulation and rehabilitation--- an
+  hypothesis, Medical Engineering \& Physics 25 (2003) 75--78.
+
+\bibitem{VWPWHRK:2014}
+J.~M. Veerbeek, E.~van Wegen, R.~van Peppen, P.~J. van~der Wees, E.~Hendriks,
+  M.~Rietberg, G.~Kwakkel, What is the evidence for physical therapy
+  poststroke? a systematic review and meta-analysis, PLoS One 9 (2014) 1--33.
+
+\bibitem{LP:2008}
+C.~L. Lynch, M.~R. Popovic, Functional electrical stimulation: closed-loop
+  control of induced muscle contractions, IEEE Control Systems Magazine 28
+  (2008) 40--50.
+
+\bibitem{S:82}
+W.~J. Shribner, A Manual of Electrotherapy, Lea \& Febiger, 1982.
+
+\bibitem{H:2008}
+Y.~Hara, Neurorehabilitation with new functional electrical stimulation for
+  hemiparetic upper extremity in stroke patients, J Nippon Med Sch. 75 (2008)
+  4--14.
+
+\bibitem{JWK:2004}
+S.~Jezernik, R.~Wassink, T.~Keller, Sliding mode closed-loop control of {FES}:
+  Controlling the shank movement, IEEE Transactions on Biomedical Engineering
+  51 (2004) 263--272.
+
+\bibitem{ZPWA:2011}
+D.~Zhang, P.~Poignet, F.~Widjaja, W.~T. Ang, Neural oscillator based control
+  for pathological tremor suppression via functional electrical stimulation,
+  Control Engineering Practice 11 (2011) 74--88.
+
+\bibitem{VHA:2012}
+M.~Vanoncini, W.~Holderbaum, B.~J. Andrews, Electrical stimulation for trunk
+  control in paraplegia: A feasibility study, Control Engineering Practice 20
+  (2012) 1247--1258.
+
+\bibitem{DTLZ:1999}
+H.~Dou, K.~K. Tan, T.~H. Lee, Z.~Zhou, Iterative learning feedback control of
+  human limbs via functional electrical stimulation, Control Engineering
+  Practice 7 (1999) 315--325.
+
+\bibitem{FHBC:2009}
+C.~Freeman, A.~M. Hughes, J.~H. Burridge, P.~H. Chappell, Iterative learning
+  control of {FES} applied to the upper extremity for rehabilitation, Control
+  Engineering Practice 17 (2009) 368--381.
+
+\bibitem{PFSB:2005}
+F.~Previdia, M.~Ferrarin, S.~M. Savaresi, S.~Bittanti, Closed-loop control of
+  {FES} supported standing up and sitting down using virtual reference feedback
+  tuning, Control Engineering Practice 13 (2005) 1173--1182.
+
+\bibitem{BPYSSP:2015}
+L.~Bai, M.~G. Pepper, Y.~Yan, S.~K. Spurgeon, M.~Sakel, M.~Phillips,
+  Quantitative assessment of upper limb motion in neurorehabilitation utilizing
+  inertial sensors, IEEE Transactions on Neural Systems and Rehabilitation
+  Engineering 23 (2015) 232--243.
+
+\bibitem{BRD:2009}
+G.~P. Braz, M.~Russold, G.~M. Davis, Functional electrical stimulation control
+  of standing and stepping after spinal cord injury: a review of technical
+  characteristics, Neuromodulation: Technology at the Neural Interface 12
+  (2009) 180--190.
+
+\bibitem{BFF:2015}
+O.~Brend, C.~Freeman, M.~French, Multiple-model adaptive control of functional
+  electrical stimulation, IEEE Transactions on Control Systems Technology 23
+  (2015) 1903--1913.
+
+\bibitem{NH:94}
+B.~M. Nigg, W.~Herzog, Biomechanics of Musculo-skeletal System, John Wiley \&
+  Sons, 1994.
+
+\bibitem{DKFD:2016}
+R.~Downey, R.~Kamalapurkar, N.~Fischer, W.~Dixon, Compensating for
+  fatigue-induced time-varying delayed muscle response in neuromuscular
+  electrical stimulation control, Recent Results on Nonlinear Delay Control
+  Systems, Advances in Delays and Dynamics, M. Malisoff et al. (eds.), Springer
+  International Publishing Switzerland 4 (2016) 143--161.
+
+\bibitem{P:2002}
+F.~Previdi, Identification of black-box nonlinear models for lower limb
+  movement control using functional electrical stimulation, Control Engineering
+  Practice 10 (2002) 91--99.
+
+\bibitem{L:12}
+F.~Le, Recursive identification of {Hammerstein} systems with application to
+  electrically stimulated muscle, Control Engineering Practice 20 (2012)
+  386--396.
+
+\bibitem{SNPHFFR:2005}
+T.~Schauer, N.~O. Negard, F.~Previdi, K.~J. Hunt, M.~H. Fraser, E.~Ferchland,
+  J.~Raisch, Online identification and nonlinear control of the electrically
+  stimulated quadriceps muscle, Control Engineering Practice 13 (2005)
+  1207--1219.
+
+\bibitem{LMFR:2010}
+F.~Le, I.~Markovsky, C.~T. Freeman, E.~Rogers, Identification of electrically
+  stimulated muscle models of stroke patients, Control Engineering Practice 18
+  (2010) 396--407.
+
+\bibitem{XCR:2014}
+W.~Xu, B.~Chu, E.~Rogers, Iterative learning control for robotic-assisted upper
+  limb stroke rehabilitation in the presence of muscle fatigue, Control
+  Engineering Practice 31 (2014) 63--72.
+
+\bibitem{FHBC:2008}
+C.~Freeman, A.~M. Hughes, J.~H. Burridge, P.~H. Chappell, P.~L. Lewin,
+  E.~Rogers, A robotic workstation for stroke rehabilitation of the upper
+  extremity using {FES}, Medical Engineering \& Physics 31 (2008) 364--373.
+
+\bibitem{L:2012}
+A.~Levant, Finite-time stability and high relative degrees in sliding-mode
+  control, Sliding Modes after the First Decade of the 21st Century, Lecture
+  Notes in Control and Information Sciences 412 (2012) 59--92.
+
+\bibitem{HFLSLMA:2013}
+A.~G.~G. Hern\'{a}ndez, L.~Fridman, A.~Levant, Y.~Shtessel, R.~Leder, C.~R.
+  Monsalve, S.~I. Andrade, High-order sliding-mode control of blood glucose:
+  Practical relative degree approach, Control Engineering Practice 21 (2013)
+  747--758.
+
+\bibitem{L:2000}
+A.~Levant, Higher order sliding: differentiation and black-box control, 39th
+  IEEE Conference on Decision and Control (2000) 1703--1708.
+
+\bibitem{Lev:03}
+A.~Levant, Higher-order sliding modes, differentiation and output-feedback
+  control, International Journal of Control 76 (2003) 924--941.
+
+\bibitem{OPH:2013}
+T.~R. Oliveira, A.~J. Peixoto, L.~Hsu, Peaking free output-feedback exact
+  tracking of uncertain nonlinear systems via dwell-time and norm observers,
+  International Journal of Robust and Nonlinear Control 23 (2013) 483--513.
+
+\bibitem{SGD:2011}
+N.~Sharma, C.~Gregory, W.~Dixon, Predictor-based compensation for
+  electromechanical delay during neuromuscular electrical stimulation, IEEE
+  Transactions on Neural Systems and Rehabilitation Engineering 19 (2011)
+  601--611.
+
+\bibitem{KMQKY:2014}
+I.~Karafyllis, M.~Malisoff, M.~de~Queiroz, M.~Krstic, R.~Yang, Predictor-based
+  tracking for neuromuscular electrical stimulation, International Journal of
+  Robust and Nonlinear Control (2014) DOI: 10.1002/rnc.3211.
+
+\bibitem{MPFG:2012}
+S.~Mohammed, P.~Poignet, P.~Fraisse, D.~Guiraud, Toward lower limbs movement
+  restoration with input-output feedback linearization and model predictive
+  control through functional electrical stimulation, Control Engineering
+  Practice 20 (2012) 182--195.
+
+\bibitem{FE:2014}
+A.~Farhoud, A.~Erfanian, Fully automatic control of paraplegic {FES} pedaling
+  using higher-order sliding mode and fuzzy logic control, IEEE Trans. Neural
+  Systems and Rehabilitation Eng. 22 (2014) 533--542.
+
+\bibitem{NE:2012}
+V.~Nekoukar, A.~Erfanian, A decentralized modular control framework for robust
+  control of {FES}-activated walker-assisted paraplegic walking using terminal
+  sliding mode and fuzzy logic control, IEEE Trans. Biomed. Eng. 59 (2012)
+  2818--2827.
+
+\bibitem{K:2002}
+H.~K. Khalil, Nonlinear systems, Prentice Hall.
+
+\bibitem{N:2009}
+G.~N. N. V.~B. Nunes, Modelação e controlo não-linear do sistema motor humano,
+  MSc thesis, Departamento de Engenharia Electrot\'ecnica, Universidade Nova de
+  Lisboa, 2009.
+
+\bibitem{FR:2000}
+L.~Farina, S.~Rinaldi, Positive linear systems: Theory and applications, John
+  Wiley \& Sons.
+
+\bibitem{SFYLS:2012}
+Y.~Song, S.~Forsgren, J.~Yu, R.~Lorentzon, P.~S. Stal, Effects on contralateral
+  muscles after unilateral electrical muscle stimulation and exercise, Plos One
+  7 (2012) 1--14.
+
+\bibitem{UGS:99}
+V.~Utkin, J.~Guldner, J.~Shi, Sliding mode control in electromechanical
+  systems, Taylor \& Francis Ltd., 1999.
+
+\bibitem{L:1990}
+J.~Lam, Convergence of a class of {Pad\'{e}} approximations for delay systems,
+  International Journal Control 52 (1990) 989--1008.
+
+\bibitem{KKO:1986}
+P.~Kokotovi\'c, H.~K. Khalil, J.~O'Reilly, Singular perturbation methods in
+  control: analysis and design, SIAM.
+
+\bibitem{U:92}
+V.~I. Utkin, Sliding modes in control and optimization, Springer-Verlag, 1992.
+
+\bibitem{MONPP:2002}
+P.~Moya, R.~Ortega, M.~S. Netto, L.~Praly, J.~Pic\'o, Application of nonlinear
+  time-scaling for robust controller design of reaction systems, International
+  Journal of Robust and Nonlinear Control 12 (2002) 57--69.
+
+\bibitem{HOC:2014}
+L.~Hsu, T.~R. Oliveira, J.~P. V.~S. Cunha, Extremum seeking control via
+  monitoring function and time-scaling for plants of arbitrary relative degree,
+  13th International Workshop on Variable Structure Systems (2014) 1--6.
+
+\bibitem{OAH:2014}
+T.~R. Oliveira, N.~O. Aminde, L.~Hsu, Monitoring function based extremum
+  seeking control for uncertain relative degrees with light source seeking
+  experiments, 53rd IEEE Conference on Decision and Control (2014) 3456--3462.
+
+\bibitem{AE:2009}
+A.~Ajoudani, A.~Erfanian, A neuro-sliding mode control with adaptive modeling
+  of uncertainty for control of movement in paralyzed limbs using functional
+  electrical stimulation, IEEE Trans. Biomed. Eng. 56 (2009) 1771--1780.
+
+\bibitem{BPU:2008}
+G.~Bartolini, A.~Pisano, E.~Usai, On an output-feedback stabilization problem
+  with uncertainty in the relative degree, International Journal of Robust and
+  Nonlinear Control 18 (2008) 741--755.
+
+\bibitem{AFL:2012}
+M.~T. Angulo, L.~Fridman, A.~Levant, Output-feedback finite-time stabilization
+  of disturbed {LTI} systems, Automatica 48 (2012) 606--611.
+
+\bibitem{FSEY:2008}
+L.~Fridman, Y.~Shtessel, C.~Edwards, X.~G. Yan, Higher-order sliding-mode
+  observer for state estimation and input reconstruction in nonlinear systems,
+  International Journal of Robust and Nonlinear Control 18 (2008) 399--412.
+
+\bibitem{BFU:1998}
+G.~Bartolini, A.~Ferrara, E.~Usai, Chattering avoidance by second order sliding
+  mode control, IEEE Trans. Automat. Contr. 43 (1998) 241--246.
+
+\bibitem{Bohannon1987206}
+R.~W. Bohannon, M.~B. Smith, Interrater reliability of a modified {Ashworth}
+  scale of muscle spasticity, Physical Therapy 67 (1987) 206--207.
+
+\bibitem{Wilson20022243}
+J.~T.~L. Wilson, A.~Hareendran, M.~Grant, T.~Baird, U.~G.~R. Schulz, K.~W.
+  Muir, I.~Bone, Improving the assessment of outcomes in stroke: Use of a
+  structured interview to assign grades on the modified {Rankin} scale, Stroke
+  33 (2002) 2243--2246.
+
+\bibitem{FuglMeyer197513}
+A.~R.~F. Meyer, L.~Jaasko, I.~Leyman, The post stroke hemiplegic patient. 1. a
+  method for evaluation of physical performance, Scandinavian Journal of
+  Rehabilitation Medicine 7 (1975) 13--31.
+
+\bibitem{F:2002}
+L.~M. Fridman, Singularly perturbed analysis of chattering in relay control
+  systems, IEEE Transactions on Automatic Control 47 (2002) 2079--2084.
+
+\bibitem{F:64}
+A.~L. Filippov, Differential equations with discontinuous right-hand side,
+  Amer. Soc. Translations 42 (1964) 199--231.
+
+\end{thebibliography}

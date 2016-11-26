@@ -1,0 +1,697 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.19)  3 OCT 2016 01:04
+entering extended mode
+**Oliveira-MEP-D-15-00647.tex
+
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
+, bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
+ian, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
+ kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
+-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
+ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
+elsh, loaded.
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\elsarticle.cls"
+Document Class: elsarticle 2009/09/17, 1.20b: Elsevier Ltd
+\@bls=\dimen102
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count88
+\c@fnote=\count89
+\c@cnote=\count90
+\c@ead=\count91
+\c@author=\count92
+\@eadauthor=\toks15
+\c@affn=\count93
+\absbox=\box26
+\keybox=\box27
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box28
+\els@boxb=\box29
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.spl") ("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+\splwrite=\write3
+\appnamewidth=\dimen109
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count95
+\output=\toks17
+\linenoprevgraf=\count96
+\linenumbersep=\dimen110
+\linenumberwidth=\dimen111
+\c@linenumber=\count97
+\c@pagewiselinenumber=\count98
+\c@LN@truepage=\count99
+\c@internallinenumber=\count100
+\c@internallinenumbers=\count101
+\quotelinenumbersep=\dimen112
+\bframerule=\dimen113
+\bframesep=\dimen114
+\bframebox=\box30
+LaTeX Info: Redefining \\ on input line 3056.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen115
+\Hy@linkcounter=\count102
+\Hy@pagecounter=\count103
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count104
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count105
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen116
+\Fld@menulength=\count106
+\Field@Width=\dimen117
+\Fld@charsize=\dimen118
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count107
+\c@Item=\count108
+\c@Hfootnote=\count109
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count110
+\c@bookmark@seq@number=\count111
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip47
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen119
+\extrarowheight=\dimen120
+\NC@list=\toks18
+\extratabsurround=\skip48
+\backup@length=\skip49
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen121
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen122
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count112
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count113
+\leftroot@=\count114
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count115
+\DOTSCASE@=\count116
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box31
+\strutbox@=\box32
+\big@size=\dimen123
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count117
+\c@MaxMatrixCols=\count118
+\dotsspace@=\muskip11
+\c@parentequation=\count119
+\dspbrk@lvl=\count120
+\tag@help=\toks22
+\row@=\count121
+\column@=\count122
+\maxfields@=\count123
+\andhelp@=\toks23
+\eqnshift@=\dimen124
+\alignsep@=\dimen125
+\tagshift@=\dimen126
+\tagwidth@=\dimen127
+\totwidth@=\dimen128
+\lineht@=\dimen129
+\@envbody=\toks24
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+\c@lemma=\count124
+\c@theorem=\count125
+\c@remark=\count126
+
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen130
+\scratchbox=\box33
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen131
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks27
+)
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 81.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count133
+)
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
+
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.out")
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.out")
+\@outlinefile=\write4
+LaTeX Font Info:    Try loading font information for U+msa on input line 110.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 110.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2] [3] <fig4_new.pdf, id=173, 223.83624pt x 230.8625pt>
+File: fig4_new.pdf Graphic file (type pdf)
+ <use fig4_new.pdf>
+Package pdftex.def Info: fig4_new.pdf used on input line 204.
+(pdftex.def)             Requested size: 241.49895pt x 249.0847pt.
+
+<aparatops.pdf, id=175, 686.565pt x 231.86626pt>
+File: aparatops.pdf Graphic file (type pdf)
+ <use aparatops.pdf>
+Package pdftex.def Info: aparatops.pdf used on input line 204.
+(pdftex.def)             Requested size: 345.0pt x 116.51306pt.
+ [4]
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/fig4_new.pdf>
+ <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/aparatops.pdf>]
+[6]
+Package epstopdf Info: Source file: <fig3.eps>
+(epstopdf)                    date: 2015-11-30 13:36:29
+(epstopdf)                    size: 38595 bytes
+(epstopdf)             Output file: <fig3-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-04-28 11:33:55
+(epstopdf)                    size: 7394 bytes
+(epstopdf)             Command: <epstopdf --outfile=fig3-eps-converted-to.pdf fig3.eps>
+(epstopdf)             \includegraphics on input line 255.
+Package epstopdf Info: Output file is already uptodate.
+ <fig3-eps-converted-to.pdf, id=217, 963.6pt x 463.7325pt>
+File: fig3-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig3-eps-converted-to.pdf>
+Package pdftex.def Info: fig3-eps-converted-to.pdf used on input line 255.
+(pdftex.def)             Requested size: 341.43306pt x 164.3113pt.
+
+<MalhaAberta2.jpg, id=218, 310.39964pt x 199.2243pt>
+File: MalhaAberta2.jpg Graphic file (type jpg)
+ <use MalhaAberta2.jpg>
+Package pdftex.def Info: MalhaAberta2.jpg used on input line 268.
+(pdftex.def)             Requested size: 369.88582pt x 237.42033pt.
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 268--270
+ [] 
+ []
+
+[7]
+
+LaTeX Warning: Text page 8 contains only floats.
+
+[8 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/fig3-eps-conv
+erted-to.pdf> <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/Ma
+lhaAberta2.jpg>] [9] <FigI2.pdf, id=255, 590.19096pt x 175.35312pt>
+File: FigI2.pdf Graphic file (type pdf)
+ <use FigI2.pdf>
+Package pdftex.def Info: FigI2.pdf used on input line 328.
+(pdftex.def)             Requested size: 341.43306pt x 101.44266pt.
+ [10 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/FigI2.pdf>]
+ [11] [12] [13] [14] [15]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 558.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 558.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 558.
+
+[16] [17]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mu' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\not' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 637.
+
+[18] [19] [20]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 729.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 729.
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--735
+
+ []
+
+[21] [22]
+Package epstopdf Info: Source file: <VIC1204PI.eps>
+(epstopdf)                    date: 2016-05-01 18:33:01
+(epstopdf)                    size: 42864 bytes
+(epstopdf)             Output file: <VIC1204PI-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-30 21:46:36
+(epstopdf)                    size: 63719 bytes
+(epstopdf)             Command: <epstopdf --outfile=VIC1204PI-eps-converted-to.pdf VIC1204PI.eps>
+(epstopdf)             \includegraphics on input line 762.
+Package epstopdf Info: Output file is already uptodate.
+ <VIC1204PI-eps-converted-to.pdf, id=441, 366.15797pt x 278.78151pt>
+File: VIC1204PI-eps-converted-to.pdf Graphic file (type pdf)
+ <use VIC1204PI-eps-converted-to.pdf>
+Package pdftex.def Info: VIC1204PI-eps-converted-to.pdf used on input line 762.
+(pdftex.def)             Requested size: 341.43306pt x 259.95325pt.
+Package epstopdf Info: Source file: <VIC1204PIRele.eps>
+(epstopdf)                    date: 2016-05-01 18:33:26
+(epstopdf)                    size: 44870 bytes
+(epstopdf)             Output file: <VIC1204PIRele-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-30 21:46:40
+(epstopdf)                    size: 60074 bytes
+(epstopdf)             Command: <epstopdf --outfile=VIC1204PIRele-eps-converted-to.pdf VIC1204PIRele.eps>
+(epstopdf)             \includegraphics on input line 775.
+Package epstopdf Info: Output file is already uptodate.
+
+<VIC1204PIRele-eps-converted-to.pdf, id=442, 366.91078pt x 278.78151pt>
+File: VIC1204PIRele-eps-converted-to.pdf Graphic file (type pdf)
+ <use VIC1204PIRele-eps-converted-to.pdf>
+Package pdftex.def Info: VIC1204PIRele-eps-converted-to.pdf used on input line 775.
+(pdftex.def)             Requested size: 341.43306pt x 259.42577pt.
+Package epstopdf Info: Source file: <POV2604PI.eps>
+(epstopdf)                    date: 2016-05-01 18:32:47
+(epstopdf)                    size: 43654 bytes
+(epstopdf)             Output file: <POV2604PI-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-30 21:45:40
+(epstopdf)                    size: 64236 bytes
+(epstopdf)             Command: <epstopdf --outfile=POV2604PI-eps-converted-to.pdf POV2604PI.eps>
+(epstopdf)             \includegraphics on input line 788.
+Package epstopdf Info: Output file is already uptodate.
+
+<POV2604PI-eps-converted-to.pdf, id=443, 366.15797pt x 278.78151pt>
+File: POV2604PI-eps-converted-to.pdf Graphic file (type pdf)
+ <use POV2604PI-eps-converted-to.pdf>
+Package pdftex.def Info: POV2604PI-eps-converted-to.pdf used on input line 788.
+(pdftex.def)             Requested size: 341.43306pt x 259.95325pt.
+Package epstopdf Info: Source file: <POV2604PIRele.eps>
+(epstopdf)                    date: 2016-05-01 18:33:13
+(epstopdf)                    size: 50558 bytes
+(epstopdf)             Output file: <POV2604PIRele-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-30 21:46:24
+(epstopdf)                    size: 73541 bytes
+(epstopdf)             Command: <epstopdf --outfile=POV2604PIRele-eps-converted-to.pdf POV2604PIRele.eps>
+(epstopdf)             \includegraphics on input line 801.
+Package epstopdf Info: Output file is already uptodate.
+
+<POV2604PIRele-eps-converted-to.pdf, id=444, 363.89954pt x 278.78151pt>
+File: POV2604PIRele-eps-converted-to.pdf Graphic file (type pdf)
+ <use POV2604PIRele-eps-converted-to.pdf>
+Package pdftex.def Info: POV2604PIRele-eps-converted-to.pdf used on input line 801.
+(pdftex.def)             Requested size: 341.43306pt x 261.58672pt.
+
+[23 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/VIC1204PI-ep
+s-converted-to.pdf>] [24 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647
+R1_clean/VIC1204PIRele-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <_ErroRMS_MovCompleto.eps>
+(epstopdf)                    date: 2016-05-01 18:33:41
+(epstopdf)                    size: 12483 bytes
+(epstopdf)             Output file: <_ErroRMS_MovCompleto-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-01 18:34:16
+(epstopdf)                    size: 5123 bytes
+(epstopdf)             Command: <epstopdf --outfile=_ErroRMS_MovCompleto-eps-converted-to.pdf _ErroRMS_MovCompleto.eps>
+(epstopdf)             \includegraphics on input line 832.
+Package epstopdf Info: Output file is already uptodate.
+
+<_ErroRMS_MovCompleto-eps-converted-to.pdf, id=481, 481.8pt x 193.72375pt>
+File: _ErroRMS_MovCompleto-eps-converted-to.pdf Graphic file (type pdf)
+
+<use _ErroRMS_MovCompleto-eps-converted-to.pdf>
+Package pdftex.def Info: _ErroRMS_MovCompleto-eps-converted-to.pdf used on input line 832.
+(pdftex.def)             Requested size: 369.88582pt x 148.73026pt.
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 832--833
+ [] 
+ []
+
+<Table1.png, id=482, 2756.04657pt x 663.22781pt>
+File: Table1.png Graphic file (type png)
+ <use Table1.png>
+Package pdftex.def Info: Table1.png used on input line 863.
+(pdftex.def)             Requested size: 413.99895pt x 99.62155pt.
+
+Overfull \hbox (36.71906pt too wide) in paragraph at lines 862--867
+[]  []
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/POV2604PI-ep
+s-converted-to.pdf>]
+
+LaTeX Warning: Text page 26 contains only floats.
+
+[26 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/POV2604PIRel
+e-eps-converted-to.pdf> <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R
+1_clean/_ErroRMS_MovCompleto-eps-converted-to.pdf>] <Muuu2_new.pdf, id=524, 541.02126pt x 567.11874pt>
+File: Muuu2_new.pdf Graphic file (type pdf)
+
+<use Muuu2_new.pdf>
+Package pdftex.def Info: Muuu2_new.pdf used on input line 888.
+(pdftex.def)             Requested size: 312.9803pt x 328.0897pt.
+ [27 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/Table1.png>
+] <Table2.png, id=541, 2822.29407pt x 1152.55594pt>
+File: Table2.png Graphic file (type png)
+ <use Table2.png>
+Package pdftex.def Info: Table2.png used on input line 916.
+(pdftex.def)             Requested size: 413.99895pt x 169.05965pt.
+
+Overfull \hbox (36.71906pt too wide) in paragraph at lines 915--920
+[]  []
+ []
+
+[28 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/Muuu2_new.pd
+f>] <cabelograma2.pdf, id=566, 369.91199pt x 268.22208pt>
+File: cabelograma2.pdf Graphic file (type pdf)
+ <use cabelograma2.pdf>
+Package pdftex.def Info: cabelograma2.pdf used on input line 938.
+(pdftex.def)             Requested size: 284.52756pt x 206.31061pt.
+
+<cabelograma01_2.pdf, id=567, 369.91199pt x 268.22208pt>
+File: cabelograma01_2.pdf Graphic file (type pdf)
+ <use cabelograma01_2.pdf>
+Package pdftex.def Info: cabelograma01_2.pdf used on input line 951.
+(pdftex.def)             Requested size: 284.52756pt x 206.31061pt.
+ [29 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/Table2.png>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 961--963
+
+ []
+
+[30 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/cabelograma2
+.pdf>] <cleberSaveControl.pdf, id=598, 369.91199pt x 280.28714pt>
+File: cleberSaveControl.pdf Graphic file (type pdf)
+ <use cleberSaveControl.pdf>
+Package pdftex.def Info: cleberSaveControl.pdf used on input line 970.
+(pdftex.def)             Requested size: 312.9803pt x 237.1503pt.
+ [31 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/cabelograma
+01_2.pdf>] [32 <C:/Users/Tiago/Desktop/Novos Dados MEP 2015/Final version/source_files_Oliveira-MEP-D-15-00647R1_clean/c
+leberSaveControl.pdf>]
+[33] [34] [35] [36] [37]
+Overfull \hbox (8.08397pt too wide) in paragraph at lines 1222--1223
+[][]\OT1/cmr/m/n/10 The au-thors thank the Brazil-ian fund-ing agen-cies CAPES, CNPq and FAPERJ
+ []
+
+
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.bbl" [38] [39] [40] [41] [42] [43])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1239.
+ [44]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1239.
+
+("C:\Users\Tiago\Desktop\Novos Dados MEP 2015\Final version\source_files_Oliveira-MEP-D-15-00647R1_clean\Oliveira-MEP-D-
+15-00647.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1239.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1239.
+Package rerunfilecheck Info: File `Oliveira-MEP-D-15-00647.out' has not changed.
+(rerunfilecheck)             Checksum: 13C79707073CBAB699D3D3FA8AFE5AEE;992.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1239.
+ ) 
+Here is how much of TeX's memory you used:
+ 7811 strings out of 493921
+ 110679 string characters out of 3147282
+ 203877 words of memory out of 3000000
+ 10795 multiletter control sequences out of 15000+200000
+ 12795 words of font info for 49 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 34i,12n,35p,1574b,634s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+cour/cour.pfa><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Oliveira-MEP-D-15-00647.pdf (44 pages, 3545809 bytes).
+PDF statistics:
+ 901 PDF objects out of 1000 (max. 8388607)
+ 187 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+
