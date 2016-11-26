@@ -132,7 +132,7 @@ function saveTimeFigure_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)  
     userInputScript;
 
-    saveTimeES;
+    saveTimeResponse(handles);
 
 
 % --- Executes on button press in saveIterations.

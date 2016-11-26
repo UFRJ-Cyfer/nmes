@@ -69,7 +69,7 @@ thetaP = theta_;
 theta(1,:) = PID0;
 theta_(1,:) = theta(1,:)-alpha;
 zeta(1) = 0;
-bestResponse = [0 0 0];
+bestResponse =[];
 
 for k=1:length(ind)/2
 	
@@ -81,7 +81,8 @@ for k=1:length(ind)/2
     
     if k == 1
 		Jmin = J(k);
-		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
+		bestResponse = [user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
+        timeBestResponse = cSum-cSum(1);
     end
     
 		zeta(k+1) = -h*zeta(k) + J(k);
@@ -91,7 +92,8 @@ for k=1:length(ind)/2
 	
 	if J(k) < Jmin && (ind(2*k) - ind(2*k-1)) > 500
 		Jmin = J(k);
-		bestResponse = [cSum-cSum(1) user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
+		bestResponse = [user(ind(2*k-1):ind(2*k)) ref(ind(2*k-1):ind(2*k))];
+        timeBestResponse = cSum-cSum(1); 
 	end
 	
 end
@@ -103,6 +105,7 @@ end
 handles.theta = theta;
 handles.thetaP = thetaP;
 handles.bestResponse = bestResponse;
+handles.timeBestResponse = timeBestResponse;
 
 handles.user = user;
 handles.ref = ref;

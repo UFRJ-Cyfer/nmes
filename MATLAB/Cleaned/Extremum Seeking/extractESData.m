@@ -2,6 +2,12 @@ function [ handles ] = extractESData( handles )
 %EXTRACTESDATA Summary of this function goes here
 %   Detailed explanation goes here+
 
+handles.bestResponse = [];
+handles.theta = [];
+handles.thetaP = [];
+handles.J = [];
+
+
 handles.J = handles.controlData.Values(handles.controlData.Values(:,4) > 0,4);
 handles.theta = handles.controlData.PID;
 

@@ -3,7 +3,7 @@ function [ timeData, controlData ] = openFileMain( pathname, filename )
 %   Detailed explanation goes here
 Param=0;Result = 0;
  
-if strcmp(pathname,[pathname(1:end-7) 'Antigo\']) &&...
+if ~isempty(strfind(pathname, '\Old\')) &&...
         exist([pathname filename], 'file')
     
     timeData = openOldFiles(pathname,filename);
