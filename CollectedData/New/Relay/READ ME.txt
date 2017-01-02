@@ -1,0 +1,17 @@
+Voluntarios contabilizados até agora :
+
+Adriano - Faltou o teste de fadiga. 
+	- Faltou o teste com o PI apenas.
+	- O padrão de 5 ciclos foi definido depois do teste com ele, o que nos fez coletar um gráfico com 4 ciclos ao inves de 5 
+(o consenso no lab na hora era de fazer 4 ciclos). 
+	- Entretanto, existe uma coleta de 5 ciclos, com o revés de ter um destes completamente errado (o voluntário manteve o braço em 45º depois da estimulação acabar)
+
+Maria - Foi-se concebido (durante o teste de fadiga) que só precisaria de um teste único (o de fadiga) aonde tanto a coleta dos 5 ciclos e a da fadiga seria feita
+	utilizando os 15 ciclos.
+
+
+Victor - O teste de fadiga tem apenas 10 ciclos, Não foi possível (em 2 testes diferentes) completar 15 ciclos devido à natureza da leitura do sensor,
+	sempre ocorria algum erro (como estouro de buffer).
+	- Tirando isso, a coleta foi completa, comparação com PI , fadiga, e 5 ciclos. Os numeros no final do arquivo representam o valor multiplicativo do Sgn(e), com o intuito
+	de ver o efeito de sua variação no resultado final.
+	
